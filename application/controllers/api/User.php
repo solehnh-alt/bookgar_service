@@ -162,7 +162,7 @@ class User extends REST_Controller {
 	}
 
 	public function login_post(){
-		$username = $this->post('username');
+		$username = $this->post('email');
 		$password = $this->post('password');
 		if(empty($username) and empty($password)){
 			$this->response([

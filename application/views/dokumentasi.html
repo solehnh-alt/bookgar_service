@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Dokumentasi API Bookgar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<?=base_url?>/assets/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?=base_url?>/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="<?=base_url?>/assets/flaticon.css">
+    <link href="<?=base_url?>/assets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?=base_url?>/assets/slider.css">
+    <link href="<?=base_url?>/assets/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+    <link href="<?=base_url?>/assets/purple.css" rel="stylesheet">
+    <link href="<?=base_url?>/assets/bootstrap-responsive.css" rel="stylesheet">
+    <link href="<?=base_url?>/assets/jtable.css" rel="stylesheet">
+    <link href="<?=base_url?>/assets/validationEngine.jquery.min.css" rel="stylesheet">
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shim.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="<?=base_url?>/assets/img/favicon/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="<?=base_url?>/assets/jquery-ui.min.js"></script>
+</head>
+<body>
+
+        <header>
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <div class="logo">
+                    <h1><a href="">Book<span class="color">Gar</span></a></h1>
+                    <div class="hidden-phone hmeta">Sewa Tempat Olahraga</div>
+                </div>
+            </div>
+            <div class="span8">
+            </div>
+        </div>
+    </div>
+</header>        <!-- Navigation bar starts -->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span>Menu</span>
+            </a>
+            <div class="nav-collapse collapse">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Navigation bar ends -->        <div class="content">
+            <div class="container">
+                <div class="row">
+    <div class="span3">
+        <ul id="ro-doc-nav" class="nav nav-list bs-docs-sidenav">
+            <li class="active"><a href="#memulai" data-toggle="list"><i class="icon-chevron-right"></i> Memulai</a></li>
+            <li class="nav-header"><span class="b-purple">Cek Nomor Whatsaap User</span></li>
+				<li class=""><a href="#province-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i> Ringkasan</a></li>
+				<li class=""><a href="#province-request" data-toggle="list"><i class="icon-chevron-right"></i> Request</a></li>
+				<li class=""><a href="#province-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a></li>
+            <li class="nav-header"><span class="b-purple">Kirim Kode Verifikasi</span></li>
+				<li class=""><a href="#city-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i> Ringkasan</a></li>
+				<li class=""><a href="#city-request" data-toggle="list"><i class="icon-chevron-right"></i> Request</a></li>
+				<li class=""><a href="#city-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a>
+            </li>
+            <li class="nav-header"><span class="b-purple">Verifikasi Akun</span></li>
+				<li class=""><a href="#subdistrict-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i>Ringkasan</a></li>
+				<li class=""><a href="#subdistrict-request" data-toggle="list"><i class="icon-chevron-right"></i>Request</a></li>
+				<li class=""><a href="#subdistrict-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a></li>
+            <li class="nav-header"><span class="b-purple">Cost</span></li>
+            <li class=""><a href="#cost-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i> Ringkasan</a>
+            </li>
+            <li class=""><a href="#cost-request" data-toggle="list"><i class="icon-chevron-right"></i> Request</a></li>
+            <li class=""><a href="#cost-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a>
+            </li>
+            <li class="nav-header"><span class="b-purple">internationalOrigin</span></li>
+            <li class=""><a href="#internationalOrigin-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i>
+                    Ringkasan</a></li>
+            <li class=""><a href="#internationalOrigin-request" data-toggle="list"><i class="icon-chevron-right"></i>
+                    Request</a></li>
+            <li class=""><a href="#internationalOrigin-response" data-toggle="list"><i class="icon-chevron-right"></i>
+                    Response</a></li>
+            <li class="nav-header"><span class="b-purple">internationalDestination</span></li>
+            <li class=""><a href="#internationalDestination-ringkasan" data-toggle="list"><i
+                        class="icon-chevron-right"></i> Ringkasan</a></li>
+            <li class=""><a href="#internationalDestination-request" data-toggle="list"><i
+                        class="icon-chevron-right"></i> Request</a></li>
+            <li class=""><a href="#internationalDestination-response" data-toggle="list"><i
+                        class="icon-chevron-right"></i> Response</a></li>
+            <li class="nav-header"><span class="b-purple">internationalCost</span></li>
+            <li class=""><a href="#internationalCost-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i>
+                    Ringkasan</a></li>
+            <li class=""><a href="#internationalCost-request" data-toggle="list"><i class="icon-chevron-right"></i>
+                    Request</a></li>
+            <li class=""><a href="#internationalCost-response" data-toggle="list"><i class="icon-chevron-right"></i>
+                    Response</a></li>
+            <li class="nav-header"><span class="b-purple">Currency</span></li>
+            <li class=""><a href="#currency-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i>
+                    Ringkasan</a></li>
+            <li class=""><a href="#currency-request" data-toggle="list"><i class="icon-chevron-right"></i> Request</a>
+            </li>
+            <li class=""><a href="#currency-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a>
+            </li>
+            <li class="nav-header"><span class="b-purple">Waybill</span></li>
+            <li class=""><a href="#waybill-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i>
+                    Ringkasan</a></li>
+            <li class=""><a href="#waybill-request" data-toggle="list"><i class="icon-chevron-right"></i> Request</a>
+            </li>
+            <li class=""><a href="#waybill-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a>
+            </li>
+        </ul>
+    </div>
+    <div class="span9">
+        <div class="list-content">
+            <section class="ro-docs" id="memulai">
+                <h3>Dokumentasi API BookGar</h3>
+                <hr/>
+                <p>Dokumentasi ini menjelaskan cara mengakses layanan API BookGar</p>
+            </section>
+            <section id="province-ringkasan">
+                <h3>Cek Nomor Whatsaap User</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "ceknowa" digunakan untuk mengecek nomor whatsapp sudah terdaftar atau belum.</p>
+            </section>
+            <section id="province-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#province-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#province-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#province-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="province-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://localhost/bookgar/api/user/ceknowa</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="province-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>nowa</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nomor Whatsapp User</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Nomor Whatsapp Harus di awali dengan 62</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="province-request-example">
+						<table class="table table-bordered table-striped">
+                            <tbody>
+                            <tr>
+                                <td>StringRequest strReq = new StringRequest(<br>Request.Method.POST,<br> http://localhost/bookgar/api/user/ceknowa , <br>new Response.Listener<String>() {<br><br>}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+					</div>
+                </div>
+            </section>
+            <section id="province-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#province-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#province-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#province-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="province-success-response" class="tab-pane fade in active">
+                        <script src="https://gist.github.com/hok00age/6e79b7f09544d3cc2e13.js"></script>
+                    </div>
+                    <div id="province-error-response" class="tab-pane fade">
+                        <script src="https://gist.github.com/hok00age/407cb932a7da3f5d4ceb.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="province-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>String</td>
+                                <td>ID propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>Int</td>
+                                <td>Code status response</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Penjelasan dari kode status</td>
+                            </tr>
+                            <tr>
+                                <td>province_id</td>
+                                <td>String</td>
+                                <td>ID propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>province_name</td>
+                                <td>String</td>
+                                <td>Nama propinsi</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="city-ringkasan">
+                <h3>City</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "city" digunakan untuk mendapatkan daftar kota/kabupaten yang ada di Indonesia.</p>
+            </section>
+            <section id="city-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#city-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#city-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#city-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="city-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>https://pro.rajaongkir.com/api/city</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="city-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>key</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>API Key</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>android-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi Android</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>ios-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi iOS</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>province</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>ID propinsi</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Jika ID kota dan ID propinsi kosong, maka akan menampilkan semua kota/kabupaten di
+                                Indonesia.
+                            </li>
+                            <li>Parameter "android-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                Android.
+                            </li>
+                            <li>Parameter "ios-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                iOS.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="city-request-example">
+                        <iframe src="//api.apiembed.com/?source=https://www.dropbox.com/s/r3729wazpaf4xk0/city.json?dl=1&targets=shell:curl,php:curl,ruby:native,objc:nsurlsession,swift:nsurlsession,python:python3,go:native,node:native,java:okhttp,csharp:restsharp" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>                    </div>
+                </div>
+            </section>
+            <section id="city-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#city-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#city-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#city-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="city-success-response">
+                        <script src="https://gist.github.com/hok00age/48840a6d44a56d208fc3.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="city-error-response">
+                        <script src="https://gist.github.com/hok00age/496a3693f04a7ecc4fb7.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="city-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>Int</td>
+                                <td>Code status response</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Penjelasan dari kode status</td>
+                            </tr>
+                            <tr>
+                                <td>province_id</td>
+                                <td>String</td>
+                                <td>ID propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>city_id</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>province</td>
+                                <td>String</td>
+                                <td>Nama propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>String</td>
+                                <td>Jenis Daerah Tingkat II. Berisi "Kota" atau "Kabupaten"</td>
+                            </tr>
+                            <tr>
+                                <td>city_name</td>
+                                <td>String</td>
+                                <td>Nama kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>postal_code</td>
+                                <td>String</td>
+                                <td>Kodepos kota/kabupaten</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="subdistrict-ringkasan">
+                <h3>Subdistrict</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "subdistrict" digunakan untuk mendapatkan daftar kecamatan yang ada di Indonesia.</p>
+            </section>
+            <section id="subdistrict-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#subdistrict-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#subdistrict-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#subdistrict-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="subdistrict-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>https://pro.rajaongkir.com/api/subdistrict</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="subdistrict-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>key</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>API Key</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>android-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi Android</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>ios-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi iOS</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>city</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>ID kecamatan</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Jika ID kecamatan kosong, maka akan menampilkan semua kecmatan pada kabupaten/kota
+                                terkait. Jika ID kecamatan diisi, maka akan menampilkan detil kecamatan.
+                            </li>
+                            <li>Parameter "android-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                Android.
+                            </li>
+                            <li>Parameter "ios-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                iOS.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="subdistrict-request-example">
+                        <iframe src="//api.apiembed.com/?source=https://www.dropbox.com/s/i4e2y4o45qrnk0r/subdistrict.json?dl=1&targets=shell:curl,php:curl,ruby:native,objc:nsurlsession,swift:nsurlsession,python:python3,go:native,node:native,java:okhttp,csharp:restsharp" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>                    </div>
+                </div>
+            </section>
+            <section id="subdistrict-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#subdistrict-success-response">Response sukses</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#subdistrict-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#subdistrict-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="subdistrict-success-response">
+                        <script src="https://gist.github.com/hok00age/7580bda3d70299931a40.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="subdistrict-error-response">
+                        <script src="https://gist.github.com/hok00age/a9d5baf2a8960ceb03e7.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="subdistrict-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>city</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>Int</td>
+                                <td>Code status response</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Penjelasan dari kode status</td>
+                            </tr>
+                            <tr>
+                                <td>subdistrict_id</td>
+                                <td>String</td>
+                                <td>ID kecamatan</td>
+                            </tr>
+                            <tr>
+                                <td>province_id</td>
+                                <td>String</td>
+                                <td>ID propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>province</td>
+                                <td>String</td>
+                                <td>Nama propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>city_id</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>city</td>
+                                <td>String</td>
+                                <td>Nama kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>String</td>
+                                <td>Jenis Daerah Tingkat II. Berisi "Kota" atau "Kabupaten"</td>
+                            </tr>
+                            <tr>
+                                <td>subdistrict_name</td>
+                                <td>String</td>
+                                <td>Nama kecamatan</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="cost-ringkasan">
+                <h3>Cost</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method “cost” digunakan untuk mengetahui tarif pengiriman (ongkos kirim) dari dan ke kecamatan tujuan
+                    tertentu dengan berat tertentu pula.</p>
+            </section>
+            <section id="cost-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#cost-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#cost-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#cost-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="cost-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>https://pro.rajaongkir.com/api/cost</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="cost-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST/HEAD</td>
+                                <td>key</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>API Key</td>
+                            </tr>
+                            <tr>
+                                <td>POST/HEAD</td>
+                                <td>android-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi Android</td>
+                            </tr>
+                            <tr>
+                                <td>POST/HEAD</td>
+                                <td>ios-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi iOS</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>origin</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten atau kecamatan asal</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>originType *</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Tipe origin: 'city' atau 'subdistrict'.</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>destination</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten atau kecamatan tujuan</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>destinationType **</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Tipe destination: 'city' atau 'subdistrict'.</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>weight</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Berat kiriman dalam gram</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>courier</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Kode kurir: jne, pos, tiki, rpx, esl, pcp, pandu, wahana, sicepat, jnt, pahala, cahaya, sap, jet, indah, dse, slis, first, ncs, star, ninja, lion, idl, rex.</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>length</td>
+                                <td>Tidak</td>
+                                <td>Number</td>
+                                <td>Dimensi panjang paket kiriman (cm)</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>width</td>
+                                <td>Tidak</td>
+                                <td>Number</td>
+                                <td>Dimensi lebar paket kiriman (cm)</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>height</td>
+                                <td>Tidak</td>
+                                <td>Number</td>
+                                <td>Dimensi tinggi paket kiriman (cm)</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>diameter</td>
+                                <td>Tidak</td>
+                                <td>Number</td>
+                                <td>Dimensi diameter paket kiriman (cm)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Parameter "courier" wajib diisi. Anda juga bisa menggabungkan kurir dengan tanda
+                                "<strong>:</strong>", misal "<strong>jne:pos:tiki</strong>" untuk mendapatkan info
+                                ongkir ketiga kurir tersebut sekaligus dalam sekali request.
+                            </li>
+                            <li>Parameter "android-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                Android.
+                            </li>
+                            <li>Parameter "ios-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                iOS.
+                            </li>
+                            <li>Penggunaan ongkos kirim dimensi sementara hanya berlaku untuk POS Indonesia</li>
+                            <li>* Gunakan originType 'city' jika ID yang Anda pakai di 'origin' merupakan ID
+                                kota/kabupaten. Namun jika Anda menggunakan ID kecamatan pada 'origin' maka gunakan
+                                'subdistrict' pada 'originType'.
+                            </li>
+                            <li>** Gunakan destinationType 'city' jika ID yang Anda pakai di 'destination' merupakan ID
+                                kota/kabupaten. Namun jika Anda menggunakan ID kecamatan pada 'destination' maka gunakan
+                                'subdistrict' pada 'destinationType'.
+                            </li>
+                            <li>Penggunaan 'originType' dan 'destinationType' ini sangat berguna jika Anda ingin
+                                mengkombinasikan pengecekan ongkir. Misal dari 'kota ke kecamatan', 'kecamatan ke
+                                kecamatan', atau 'kota ke kota'.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="cost-request-example">
+                        <iframe src="//api.apiembed.com/?source=https://www.dropbox.com/s/28kh1ut74w52tvp/cost.json?dl=1&targets=shell:curl,php:curl,ruby:native,objc:nsurlsession,swift:nsurlsession,python:python3,go:native,node:native,java:okhttp,csharp:restsharp" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>                    </div>
+                </div>
+            </section>
+            <section id="cost-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#cost-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#cost-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#cost-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="cost-success-response">
+                        <script src="https://gist.github.com/hok00age/69ae7215300ffcc36bb7.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="cost-error-response">
+                        <script src="https://gist.github.com/hok00age/785d58695eddbfeb2db3.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="cost-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>origin</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten atau kecamatan asal</td>
+                            </tr>
+                            <tr>
+                                <td>originType</td>
+                                <td>String</td>
+                                <td>Tipe origin</td>
+                            </tr>
+                            <tr>
+                                <td>destination</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten atau kecamatan tujuan</td>
+                            </tr>
+                            <tr>
+                                <td>destinationType</td>
+                                <td>String</td>
+                                <td>Tipe destination</td>
+                            </tr>
+                            <tr>
+                                <td>weight</td>
+                                <td>Int</td>
+                                <td>Berat kiriman</td>
+                            </tr>
+                            <tr>
+                                <td>courier</td>
+                                <td>String</td>
+                                <td>Kode kurir yang dipakai</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>Int</td>
+                                <td>Kode status response</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Penjelasan kode status</td>
+                            </tr>
+                            <tr>
+                                <td>city_id</td>
+                                <td>String</td>
+                                <td>ID kota atau kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>province_id</td>
+                                <td>String</td>
+                                <td>ID propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>province</td>
+                                <td>String</td>
+                                <td>Propinsi dimana kota atau kabupaten berada</td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>String</td>
+                                <td>Jenis Daerah Tingkat II</td>
+                            </tr>
+                            <tr>
+                                <td>city_name</td>
+                                <td>String</td>
+                                <td>Nama kota atau kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>postal_code</td>
+                                <td>String</td>
+                                <td>Kodepos kota atau kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>subdistrict_id</td>
+                                <td>String</td>
+                                <td>ID kecamatan</td>
+                            </tr>
+                            <tr>
+                                <td>subdistrict_name</td>
+                                <td>String</td>
+                                <td>Nama kecamatan</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>String</td>
+                                <td>Bagian dari results yang merupakan kode kurir</td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>String</td>
+                                <td>Nama kurir</td>
+                            </tr>
+                            <tr>
+                                <td>service</td>
+                                <td>String</td>
+                                <td>Nama layanan yang digunakan dalam pengiriman</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Deskripsi dari layanan pengiriman terkait</td>
+                            </tr>
+                            <tr>
+                                <td>value</td>
+                                <td>Int</td>
+                                <td>Tarif pengiriman (ongkos kirim)</td>
+                            </tr>
+                            <tr>
+                                <td>etd</td>
+                                <td>String</td>
+                                <td>Perkiraan waktu pengiriman (dalam hari).</td>
+                            </tr>
+                            <tr>
+                                <td>note</td>
+                                <td>String</td>
+                                <td>Catatan terkait tarif pengiriman</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="internationalOrigin-ringkasan">
+                <h3>InternationalOrigin</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "internationalOrigin" digunakan untuk mendapatkan daftar/nama kota yang mendukung pengiriman
+                    internasional.</p>
+            </section>
+            <section id="internationalOrigin-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#internationalOrigin-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#internationalOrigin-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#internationalOrigin-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="internationalOrigin-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>https://pro.rajaongkir.com/api/v2/internationalOrigin</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="internationalOrigin-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>key</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>API Key</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>android-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi Android</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>ios-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi iOS</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>province</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>ID propinsi</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Jika ID kota dan ID propinsi kosong, maka akan menampilkan semua kota/kabupaten yang
+                                mendukung pengiriman internasional di Indonesia.
+                            </li>
+                            <li>Parameter "android-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                Android.
+                            </li>
+                            <li>Parameter "ios-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                iOS.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="internationalOrigin-request-example">
+                        <iframe src="//api.apiembed.com/?source=https://www.dropbox.com/s/ibrc5ommk74jbds/internationalOriginV2.json?dl=1&targets=shell:curl,php:curl,ruby:native,objc:nsurlsession,swift:nsurlsession,python:python3,go:native,node:native,java:okhttp,csharp:restsharp" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>                    </div>
+                </div>
+            </section>
+            <section id="internationalOrigin-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#internationalOrigin-success-response">Response
+                            sukses</a></li>
+                    <li><a data-toggle="tab" href="#internationalOrigin-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#internationalOrigin-penjelasan-response">Penjelasan response</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="internationalOrigin-success-response">
+                        <script src="https://gist.github.com/hok00age/3a6b396d77db8519147d.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="internationalOrigin-error-response">
+                        <script src="https://gist.github.com/hok00age/9518737a7b71272bb3cb.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="internationalOrigin-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>Int</td>
+                                <td>Code status response</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Penjelasan dari kode status</td>
+                            </tr>
+                            <tr>
+                                <td>province_id</td>
+                                <td>String</td>
+                                <td>ID propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>city_id</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>province</td>
+                                <td>String</td>
+                                <td>Nama propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>String</td>
+                                <td>Jenis Daerah Tingkat II. Berisi "Kota" atau "Kabupaten"</td>
+                            </tr>
+                            <tr>
+                                <td>city_name</td>
+                                <td>String</td>
+                                <td>Nama kota/kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>postal_code</td>
+                                <td>String</td>
+                                <td>Kodepos kota/kabupaten</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="internationalDestination-ringkasan">
+                <h3>InternationalDestination</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "internationalDestination" digunakan untuk mendapatkan daftar/nama negara tujuan pengiriman
+                    internasional.</p>
+            </section>
+            <section id="internationalDestination-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#internationalDestination-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#internationalDestination-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#internationalDestination-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="internationalDestination-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>https://pro.rajaongkir.com/api/v2/internationalDestination</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="internationalDestination-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>key</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>API Key</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>android-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi Android</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>ios-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi iOS</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>ID negara</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Jika ID negara kosong, maka akan menampilkan semua negara tujuan pengiriman
+                                internasional.
+                            </li>
+                            <li>Parameter "android-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                Android.
+                            </li>
+                            <li>Parameter "ios-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                iOS.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="internationalDestination-request-example">
+                        <iframe src="//api.apiembed.com/?source=https://www.dropbox.com/s/cfvi91bxic2mxlj/internationalDestinationV2.json?dl=1&targets=shell:curl,php:curl,ruby:native,objc:nsurlsession,swift:nsurlsession,python:python3,go:native,node:native,java:okhttp,csharp:restsharp" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>                    </div>
+                </div>
+            </section>
+            <section id="internationalDestination-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#internationalDestination-success-response">Response
+                            sukses</a></li>
+                    <li><a data-toggle="tab" href="#internationalDestination-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#internationalDestination-penjelasan-response">Penjelasan
+                            response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="internationalDestination-success-response">
+                        <script src="https://gist.github.com/hok00age/f6353dc4623205a2e6a2.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="internationalDestination-error-response">
+                        <script src="https://gist.github.com/hok00age/7922ce8a20de9e6a3367.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="internationalDestination-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>String</td>
+                                <td>ID negara</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>Int</td>
+                                <td>Code status response</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Penjelasan dari kode status</td>
+                            </tr>
+                            <tr>
+                                <td>country_id</td>
+                                <td>String</td>
+                                <td>ID negara</td>
+                            </tr>
+                            <tr>
+                                <td>country_name</td>
+                                <td>String</td>
+                                <td>Nama negara</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="internationalCost-ringkasan">
+                <h3>InternationalCost</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method “internationalCost” digunakan untuk mengetahui tarif pengiriman (ongkos kirim) internasional
+                    dari kota-kota di Indonesia ke negara tujuan di seluruh dunia.</p>
+            </section>
+            <section id="internationalCost-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#internationalCost-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#internationalCost-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#internationalCost-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="internationalCost-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>https://pro.rajaongkir.com/api/v2/internationalCost</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="internationalCost-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST/HEAD</td>
+                                <td>key</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>API Key</td>
+                            </tr>
+                            <tr>
+                                <td>POST/HEAD</td>
+                                <td>android-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi Android</td>
+                            </tr>
+                            <tr>
+                                <td>POST/HEAD</td>
+                                <td>ios-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi iOS</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>origin</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>ID kota atau kabupaten asal</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>destination</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>ID negara tujuan</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>weight</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Berat kiriman dalam gram</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>courier</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Kode kurir: pos, tiki, jne, slis, expedito.</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>length</td>
+                                <td>Tidak</td>
+                                <td>Number</td>
+                                <td>Dimensi panjang paket kiriman</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>width</td>
+                                <td>Tidak</td>
+                                <td>Number</td>
+                                <td>Dimensi lebar paket kiriman</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>height</td>
+                                <td>Tidak</td>
+                                <td>Number</td>
+                                <td>Dimensi tinggi paket kiriman</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Parameter "courier" wajib diisi. Anda juga bisa menggabungkan kurir dengan tanda
+                                "<strong>:</strong>", misal "<strong>pos:tiki</strong>" untuk mendapatkan info ongkir
+                                kedua kurir tersebut sekaligus dalam sekali request.
+                            </li>
+                            <li>Parameter "android-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                Android.
+                            </li>
+                            <li>Parameter "ios-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                iOS.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="internationalCost-request-example">
+                        <iframe src="//api.apiembed.com/?source=https://www.dropbox.com/s/50onazj3ch6s66z/internationalCostV2.json?dl=1&targets=shell:curl,php:curl,ruby:native,objc:nsurlsession,swift:nsurlsession,python:python3,go:native,node:native,java:okhttp,csharp:restsharp" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>                    </div>
+                </div>
+            </section>
+            <section id="internationalCost-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#internationalCost-success-response">Response
+                            sukses</a></li>
+                    <li><a data-toggle="tab" href="#internationalCost-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#internationalCost-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="internationalCost-success-response">
+                        <script src="https://gist.github.com/hok00age/f7ba52dac2eb228a52eaa69d70d0973a.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="internationalCost-error-response">
+                        <script src="https://gist.github.com/hok00age/8b1a56aa394464fa658d.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="internationalCost-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>origin</td>
+                                <td>String</td>
+                                <td>ID kota/kabupaten asal</td>
+                            </tr>
+                            <tr>
+                                <td>destination</td>
+                                <td>String</td>
+                                <td>ID negara tujuan</td>
+                            </tr>
+                            <tr>
+                                <td>weight</td>
+                                <td>Int</td>
+                                <td>Berat kiriman</td>
+                            </tr>
+                            <tr>
+                                <td>courier</td>
+                                <td>String</td>
+                                <td>Kode kurir yang dipakai</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>Int</td>
+                                <td>Kode status response</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Penjelasan kode status</td>
+                            </tr>
+                            <tr>
+                                <td>city_id</td>
+                                <td>String</td>
+                                <td>ID kota atau kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>province_id</td>
+                                <td>String</td>
+                                <td>ID propinsi</td>
+                            </tr>
+                            <tr>
+                                <td>province</td>
+                                <td>String</td>
+                                <td>Propinsi dimana kota atau kabupaten berada</td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>String</td>
+                                <td>Jenis Daerah Tingkat II</td>
+                            </tr>
+                            <tr>
+                                <td>city_name</td>
+                                <td>String</td>
+                                <td>Nama kota atau kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>postal_code</td>
+                                <td>String</td>
+                                <td>Kodepos kota atau kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>country_id</td>
+                                <td>String</td>
+                                <td>ID negara tujuan</td>
+                            </tr>
+                            <tr>
+                                <td>country_name</td>
+                                <td>String</td>
+                                <td>Nama negara tujuan</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>String</td>
+                                <td>Bagian dari results yang merupakan kode kurir</td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>String</td>
+                                <td>Nama kurir</td>
+                            </tr>
+                            <tr>
+                                <td>service</td>
+                                <td>String</td>
+                                <td>Nama layanan yang digunakan dalam pengiriman</td>
+                            </tr>
+                            <tr>
+                                <td>cost</td>
+                                <td>Decimal</td>
+                                <td>Tarif layanan</td>
+                            </tr>
+                            <tr>
+                                <td>currency</td>
+                                <td>String</td>
+                                <td>Jenis mata uang: IDR atau USD. Jika mata uang USD maka akan ada informasi tambahan
+                                    currency di response JSON.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>etd</td>
+                                <td>String</td>
+                                <td>Estimasi waktu pengiriman (jika ada)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="currency-ringkasan">
+                <h3>Currency</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "currency" digunakan untuk mendapatkan informasi nilai tukar rupiah terhadap US dollar.</p>
+            </section>
+            <section id="currency-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#currency-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#currency-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#currency-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="currency-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>https://pro.rajaongkir.com/api/currency</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="currency-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>key</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>API Key</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>android-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi Android</td>
+                            </tr>
+                            <tr>
+                                <td>GET/HEAD</td>
+                                <td>ios-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi iOS</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Parameter "android-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                Android.
+                            </li>
+                            <li>Parameter "ios-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                iOS.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="currency-request-example">
+                        <iframe src="//api.apiembed.com/?source=https://www.dropbox.com/s/kde7cfhu6gqdcw6/currency.json?dl=1&targets=shell:curl,php:curl,ruby:native,objc:nsurlsession,swift:nsurlsession,python:python3,go:native,node:native,java:okhttp,csharp:restsharp" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>                    </div>
+                </div>
+            </section>
+            <section id="currency-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#currency-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#currency-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#currency-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="currency-success-response">
+                        <script src="https://gist.github.com/hok00age/4640c5ad82fddd38a647.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="currency-error-response">
+                        <script src="https://gist.github.com/hok00age/e5997d804cb3791edde9.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="currency-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>code</td>
+                                <td>Int</td>
+                                <td>Code status response</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Penjelasan dari kode status</td>
+                            </tr>
+                            <tr>
+                                <td>value</td>
+                                <td>Integer</td>
+                                <td>Nilai kurs mata uang rupiah terhadap US Dollar</td>
+                            </tr>
+                            <tr>
+                                <td>last_update</td>
+                                <td>String</td>
+                                <td>Terakhir nilai kurs rupiah di-update</td>
+                            </tr>
+                            <tr>
+                                <td>source_name</td>
+                                <td>String</td>
+                                <td>Nama sumber pengambilan data kurs rupiah</td>
+                            </tr>
+                            <tr>
+                                <td>source_link</td>
+                                <td>String</td>
+                                <td>Tautan sumber pengambilan data kurs rupiah</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="waybill-ringkasan">
+                <h3>Waybill</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method “waybill” untuk digunakan melacak/mengetahui status pengiriman berdasarkan nomor resi.</p>
+            </section>
+            <section id="waybill-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#waybill-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#waybill-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#waybill-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="waybill-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>https://pro.rajaongkir.com/api/waybill</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="waybill-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST/HEAD</td>
+                                <td>key</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>API Key</td>
+                            </tr>
+                            <tr>
+                                <td>POST/HEAD</td>
+                                <td>android-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi Android</td>
+                            </tr>
+                            <tr>
+                                <td>POST/HEAD</td>
+                                <td>ios-key</td>
+                                <td>Tidak</td>
+                                <td>String</td>
+                                <td>Identitas aplikasi iOS</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>waybill</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nomor resi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>courier</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Kode kurir: jne, pos, tiki, wahana, jnt, rpx, sap, sicepat, pcp, jet, dse, first, ninja, lion, idl, rex</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Parameter "android-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                Android.
+                            </li>
+                            <li>Parameter "ios-key" wajib disertakan jika Anda mengaktifkan perujuk untuk aplikasi
+                                iOS.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="waybill-request-example">
+                        <iframe src="//api.apiembed.com/?source=https://www.dropbox.com/s/6yd05yickvxgye3/waybill.json?dl=1&targets=shell:curl,php:curl,ruby:native,objc:nsurlsession,swift:nsurlsession,python:python3,go:native,node:native,java:okhttp,csharp:restsharp" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>                    </div>
+                </div>
+            </section>
+            <section id="waybill-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#waybill-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#waybill-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#waybill-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="waybill-success-response">
+                        <script src="https://gist.github.com/hok00age/e3275f987d106cde4cb6.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="waybill-error-response">
+                        <script src="https://gist.github.com/hok00age/fc384346695468e06311.js"></script>
+                    </div>
+                    <div class="tab-pane fade" id="waybill-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>waybill</td>
+                                <td>String</td>
+                                <td>Nomor resi pengiriman yang diinputkan</td>
+                            </tr>
+                            <tr>
+                                <td>courier</td>
+                                <td>String</td>
+                                <td>Kode kurir yang diinputkan</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>Int</td>
+                                <td>Kode status response</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>String</td>
+                                <td>Penjelasan kode status</td>
+                            </tr>
+                            <tr>
+                                <td>delivered</td>
+                                <td>Boolean</td>
+                                <td>Status apakah sudah terkirim, 'true' jika terkirim, 'false' jika belum.</td>
+                            </tr>
+                            <tr>
+                                <td>courier_code</td>
+                                <td>String</td>
+                                <td>Kode kurir</td>
+                            </tr>
+                            <tr>
+                                <td>courier_name</td>
+                                <td>String</td>
+                                <td>Nama kurir</td>
+                            </tr>
+                            <tr>
+                                <td>waybill_number</td>
+                                <td>String</td>
+                                <td>Nomor resi pengiriman</td>
+                            </tr>
+                            <tr>
+                                <td>service_code</td>
+                                <td>String</td>
+                                <td>Jenis layanan pengiriman yang dipakai</td>
+                            </tr>
+                            <tr>
+                                <td>waybill_date</td>
+                                <td>Date</td>
+                                <td>Tanggal pengiriman</td>
+                            </tr>
+                            <tr>
+                                <td>shipper_name</td>
+                                <td>String</td>
+                                <td>Nama pengirim</td>
+                            </tr>
+                            <tr>
+                                <td>receiver_name</td>
+                                <td>String</td>
+                                <td>Nama penerima</td>
+                            </tr>
+                            <tr>
+                                <td>origin</td>
+                                <td>String</td>
+                                <td>Kota asal pengiriman</td>
+                            </tr>
+                            <tr>
+                                <td>destination</td>
+                                <td>String</td>
+                                <td>Kota tujuan pengiriman</td>
+                            </tr>
+                            <tr>
+                                <td>waybill_time</td>
+                                <td>Time</td>
+                                <td>Waktu/Jam pengiriman</td>
+                            </tr>
+                            <tr>
+                                <td>weight</td>
+                                <td>Number</td>
+                                <td>Berat kiriman</td>
+                            </tr>
+                            <tr>
+                                <td>shipper_address1</td>
+                                <td>String</td>
+                                <td>Alamat lengkap pengirim. Baris 1</td>
+                            </tr>
+                            <tr>
+                                <td>shipper_address2</td>
+                                <td>String</td>
+                                <td>Alamat lengkap pengirim. Baris 2</td>
+                            </tr>
+                            <tr>
+                                <td>shipper_address3</td>
+                                <td>String</td>
+                                <td>Alamat lengkap pengirim. Baris 3</td>
+                            </tr>
+                            <tr>
+                                <td>shipper_city</td>
+                                <td>String</td>
+                                <td>Kota pengirim</td>
+                            </tr>
+                            <tr>
+                                <td>receiver_address1</td>
+                                <td>String</td>
+                                <td>Alamat lengkap penerima. Baris 1</td>
+                            </tr>
+                            <tr>
+                                <td>receiver_address2</td>
+                                <td>String</td>
+                                <td>Alamat lengkap penerima. Baris 2</td>
+                            </tr>
+                            <tr>
+                                <td>receiver_address3</td>
+                                <td>String</td>
+                                <td>Alamat lengkap penerima. Baris 3</td>
+                            </tr>
+                            <tr>
+                                <td>receiver_city</td>
+                                <td>String</td>
+                                <td>Kota penerima</td>
+                            </tr>
+                            <tr>
+                                <td>status</td>
+                                <td>String</td>
+                                <td>Status pengiriman. Bisa berupa "DELIVERED", "ON PROCESS", dsb.</td>
+                            </tr>
+                            <tr>
+                                <td>pod_receiver</td>
+                                <td>String</td>
+                                <td>Proof of Delivery receiver. Penerima paket kiriman.</td>
+                            </tr>
+                            <tr>
+                                <td>pod_date</td>
+                                <td>Date</td>
+                                <td>Tanggal paket kiriman diterima</td>
+                            </tr>
+                            <tr>
+                                <td>pod_time</td>
+                                <td>Time</td>
+                                <td>Waktu/Jam paket kiriman diterima</td>
+                            </tr>
+                            <tr>
+                                <td>manifest</td>
+                                <td>Array</td>
+                                <td>Manifest merupakan riwayat pengiriman paket. Value bisa berupa array atau '<strong>null</strong>'
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>manifest_code</td>
+                                <td>String</td>
+                                <td>Kode riwayat pengiriman</td>
+                            </tr>
+                            <tr>
+                                <td>manifest_description</td>
+                                <td>String</td>
+                                <td>Penjelasan mengenai kode manifest</td>
+                            </tr>
+                            <tr>
+                                <td>manifest_date</td>
+                                <td>Date</td>
+                                <td>Tanggal manifest</td>
+                            </tr>
+                            <tr>
+                                <td>manifest_time</td>
+                                <td>String</td>
+                                <td>Waktu/jam manifest</td>
+                            </tr>
+                            <tr>
+                                <td>city_name</td>
+                                <td>String</td>
+                                <td>Nama kota terkait riwayat pengiriman</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<a href="#0" class="cd-top">Top</a>
+<script>
+    $(document).ready(function () {
+        var offset = 300;
+        var offset_opacity = 1200;
+        var scroll_top_duration = 700;
+        var $back_to_top = $('.cd-top');
+
+        $(window).scroll(function () {
+            ($(this).scrollTop() > offset) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+            if ($(this).scrollTop() > offset_opacity) {
+                $back_to_top.addClass('cd-fade-out');
+            }
+        });
+
+        $back_to_top.on('click', function (event) {
+            event.preventDefault();
+            $('body,html').animate({
+                scrollTop: 0
+            }, scroll_top_duration);
+        });
+    });
+</script>            </div>
+        </div>
+        <!-- Social -->
+
+<div class="visible-desktop social-links">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <p class="big"><span>Ikuti kami di</span> <a href="https://www.facebook.com/rajaongkir" target="_blank"><i class="icon-facebook"></i>Facebook</a> <a target="_blank" href="https://twitter.com/rajaongkir"><i class="icon-twitter"></i>Twitter</a> <a target="_blank" href="https://plus.google.com/communities/117857162715645193153"><i class="icon-google-plus"></i>Google Plus</a></p>
+            </div>
+        </div>    
+    </div>
+</div>
+<!-- Footer -->
+<footer class="hidden-phone">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="copy">
+                    <h6>Raja<span class="color">Ongkir</span></h6>
+                    <p>Copyright &copy; 2019 RajaOngkir</p>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</footer>
+<script src="<?=base_url?>/assets/bootstrap.js"></script> 
+<script src="<?=base_url?>/assets/jquery.cslider.js"></script>
+<script src="<?=base_url?>/assets/modernizr.custom.28468.js"></script>
+<script src="<?=base_url?>/assets/jquery.validationEngine.min.js"></script>
+<script src="<?=base_url?>/assets/jquery.validationEngine-id.js"></script>
+<script src="<?=base_url?>/assets/custom.js"></script>
+<script src="<?=base_url?>/assets/cycle.js"></script>
+<script src="<?=base_url?>/assets/jquery.mixitup.min.js"></script>
+<script src="<?=base_url?>/assets/jquery.autocomplete.min.js"></script>    </body>
+</html>
