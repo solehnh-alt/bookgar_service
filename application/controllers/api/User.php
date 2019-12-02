@@ -160,5 +160,46 @@ class User extends REST_Controller {
 		return $CodeEX;
 	
 	}
+
+	public function login_post(){
+		$username = $this->post('username');
+		$password = $this->post('password');
+		if(empty($username) and empty($password)){
+			$this->response([
+				'status' => FALSE,
+				'message' => "Username dan Password Harus di Isi"
+			], REST_Controller::HTTP_NOT_FOUND);
+		} else {
+			
+			$resuser = $this->user->cek_user($username);
+			if($resuser->num_rows() < 1){
+				$this->response([
+					'status' => FALSE,
+					'message' => "Username Tidak Terdaftar"
+				], REST_Controller::HTTP_NOT_FOUND);
+			} else {
+				$r = $resuser->row();
+				$pass = $r->password_user;
+				$verify = password_verify($password,$pass);
+				if(!$verify){
+					$this->response([
+						'status' => FALSE,
+						'message' => "Cek Kombinasi Password Anda !"
+					], REST_Controller::HTTP_NOT_FOUND);
+				} else {
+					$data = array(
+						'logged_in'		=> TRUE,
+						'id'			=> $r->id,
+						'username'		=> $r->email_user,
+					);
+					$this->response([
+						'status' 	=> TRUE,
+						'message' 	=> 'Login Berhasil',
+						'data'		=> $data
+					], REST_Controller::HTTP_OK);
+				}
+			}
+		}
+	}
 	
 }
