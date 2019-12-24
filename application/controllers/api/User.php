@@ -251,5 +251,9 @@ class User extends REST_Controller {
 				'message' => "Biodata Gagal di Update",
             ], REST_Controller::HTTP_NOT_FOUND);
         }
-    }
+	}
+	
+	public function coba(){
+		echo 1;
+	}
 }
