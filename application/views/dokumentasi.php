@@ -704,6 +704,185 @@ StringRequest strReq = new StringRequest(
                             </thead>
                             <tbody>
                             <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+							<tr>
+                                <td>message</td>
+                                <td>String</td>
+                                <td>Pesan Berhasil atau Tidak</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="editbio-ringkasan">
+			<hr/>
+                <h3>Edit Biodata User</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method editbiodata dalam user ini digunakan untuk Menedit biodata user</p>
+            </section>
+            <section id="editbio-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#editbio-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#editbio-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#editbio-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="editbio-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/user/editbiodata</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="editbio-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>email</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Email User</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>password</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Password User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>fname</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nama Depan User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>lname</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nama Belakang User</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>id_kelurahan</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Id Kelurahan Referensi dari tabel Kelurahan</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>tgl_lahir</td>
+                                <td>Ya</td>
+                                <td>Date</td>
+                                <td>Tanggal Lahir User</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>alamat</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Alamat User</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="editbio-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/user/editbiodata, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="editbio-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#editbio-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#editbio-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#editbio-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="editbio-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Biodata Berhasil di Update",
+    "data": {
+        "email_user": "ss@gmail.com",
+        "fname_user": "richdd",
+        "lname_user": "brian",
+        "tanggallahir_user": "1999-09-09",
+        "id_kelurahan": "1101010001",
+        "alamatlengkap_user": "sssd",
+        "datemodified_user": "2019-12-24 05:27:49"
+    }
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="editbio-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="editbio-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
                                 <td>Komponen</td>
                                 <td>Tipe</td>
                                 <td>Keterangan</td>
@@ -1105,6 +1284,828 @@ StringRequest strReq = new StringRequest(
                                 <td>name</td>
                                 <td>String</td>
                                 <td>Nama Kabupaten</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="ceknowamitra-ringkasan">
+			<hr/>
+                <h3><strong>Cek Nomor Whatsaap Mitra</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "ceknowa" digunakan untuk mengecek nomor whatsapp sudah terdaftar atau belum.</p>
+            </section>
+            <section id="ceknowamitra-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#ceknowamitra-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#ceknowamitra-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#ceknowamitra-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="ceknowamitra-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/mitra/ceknowa</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="ceknowamitra-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>nowa</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nomor Whatsapp Mitra</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Nomor Whatsapp Harus di awali dengan 62</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="ceknowamitra-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/mitra/ceknowa , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="ceknowamitra-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#ceknowamitra-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#ceknowamitra-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#ceknowamitra-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="ceknowamitra-success-response" class="tab-pane fade in active">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+	"status": true,
+	"message": "6285702015553 Sudah Terdaftar"
+}
+{
+	"status": true,
+	"message": "628570201555 Belum Terdaftar"
+}
+</code>
+					
+</pre>
+
+                    </div>
+                    <div id="ceknowamitra-error-response" class="tab-pane fade">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+	"status": false,
+	"message": "Masukan Nomor Whatsapp"
+}
+</code>
+					
+</pre>
+                    </div>
+                    <div class="tab-pane fade" id="ceknowamitra-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>message</td>
+                                <td>string</td>
+                                <td>pesan sudah terdaftar atau belum</td>
+                            </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="otpmitra-ringkasan">
+			<hr/>
+                <h3><strong>Kirim Kode Verifikasi Mitra</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "kirimotp" digunakan untuk mendapatkan kode verifikasi akun yang dikirim melalui Whatsapp jika nomor yang di masukan belum pernah terdaftar pada aplikasi BookGar ini. Nomor yang dimasukan di awali dengan kode 62. Setelah request ini sukses, user akan menerima pesan berupa kode sejumlah 4 karakter yang berlaku 5 menit setelah kode itu di kirimkan</p>
+            </section>
+            <section id="otpmitra-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#otpmitra-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#otpmitra-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#otpmitra-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="otpmitra-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/mitra/kirimotp</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="otpmitra-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>nowa</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nomor Whatsapp Mitra</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Nomor Whatsapp Harus di awali dengan 62</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="otpmitra-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/mitra/kirimotp , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="otpmitra-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#otpmitra-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#otpmitra-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#otpmitra-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="otpmitra-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil Ditambahkan",
+    "data": {
+        "nowa_val": "6285702015553",
+        "otp_val": "6152",
+        "createdtime_val": "2019-12-02 10:19:14"
+    }
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="otpmitra-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Data Tidak Ada",
+    "data": {
+        "nowa_val": "6285702015553",
+        "otp_val": "6152",
+        "createdtime_val": "2019-12-02 10:19:14"
+    }
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="otpmitra-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="registrasimitra-ringkasan">
+				<hr/>
+                <h3><strong>VERIFIKASI & REGISTRASI AKUN MITRA</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "verifikasi" digunakan untuk mengecek kode verifikasi apakah cocok atau tidak , dan ketika cocok maka akan mengirimkan biodata user untuk Registrasi.</p>
+            </section>
+            <section id="registrasimitra-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#registrasimitra-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#registrasimitra-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#registrasimitra-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="registrasimitra-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/mitra/verifikasi</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="registrasimitra-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>email</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Email Mitra</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>password</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Password Mitra</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>fname</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nama Depan Mitra</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>lname</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nama Belakang Mitra</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>id_kelurahan</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Id Kelurahan Referensi dari tabel Kelurahan</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>tgl_lahir</td>
+                                <td>Ya</td>
+                                <td>Date</td>
+                                <td>Tanggal Lahir Mitra</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>alamat</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Alamat Mitra</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>kode</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Kode yang dikirim oleh sistem kepada User melalui Whatsapp</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>nik_mitra</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nomor Induk Kependudukan Mitra</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Kode sejumlah 4 karakter
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="registrasimitra-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/mitra/verifikasi, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="registrasimitra-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#registrasimitra-success-response">Response sukses</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#registrasimitra-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#registrasimitra-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="registrasimitra-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Verifikasi dan Registrasi Berhasil",
+    "data": {
+        "email_mitra": "ss@gmail.com",
+        "fname_mitra": "richdd",
+        "lname_mitra": "brian",
+        "nik_mitra": "3303043007960001",
+        "tanggallahir_mitra": "1999-09-09",
+        "id_kelurahan": "1101010001",
+        "alamatlengkap_mitra": "sssd",
+        "nowa_mitra": "6285702015553",
+        "password_mitra": "$2y$10$O05PXFZqZGv8bczsHIja7.q63FjoXWfjLGr7AnHLmeRG1Q3FbeqqK",
+        "datecreated_mitra": "2019-12-24 05:19:39",
+        "datemodified_mitra": "2019-12-24 05:19:39"
+    }
+}
+</code>
+					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="registrasimitra-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Lebih dari 5 menit, kirim olang kode verifikasi"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="registrasimitra-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+							<tr>
+                                <td>message</td>
+                                <td>String</td>
+                                <td>Pesan Berhasil atau Tidak</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="loginmitra-ringkasan">
+			<hr/>
+                <h3>Login Mitra</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "login" digunakan untuk login aplikasi.</p>
+            </section>
+            <section id="loginmitra-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#loginmitra-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#loginmitra-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#loginmitra-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="loginmitra-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/mitra/login</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="loginmitra-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>email</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Email User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>password</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Password User</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="loginmitra-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/mitra/login, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="loginmitra-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#loginmitra-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#loginmitra-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#loginmitra-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="loginmitra-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Login Berhasil",
+    "data": {
+        "logged_in": true,
+        "id": "6",
+        "email": "ss@gmail.com"
+    }
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="loginmitra-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Cek Kombinasi Password Anda !"
+}
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="loginmitra-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+							<tr>
+                                <td>message</td>
+                                <td>String</td>
+                                <td>Pesan Berhasil atau Tidak</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="editbiomitra-ringkasan">
+			<hr/>
+                <h3>Edit Biodata Mitra</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method editbiodatamitra dalam mitra ini digunakan untuk Mengedit biodata Mitra</p>
+            </section>
+            <section id="editbiomitra-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#editbiomitra-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#editbiomitra-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#editbiomitra-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="editbiomitra-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/mitra/editbiomitra</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="editbiomitra-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>email</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Email User</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>password</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Password User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>fname</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nama Depan User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>lname</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Nama Belakang User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>nik_mitra</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>NIK Mitra</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>id_kelurahan</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Id Kelurahan Referensi dari tabel Kelurahan</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>tgl_lahir</td>
+                                <td>Ya</td>
+                                <td>Date</td>
+                                <td>Tanggal Lahir User</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>alamat</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Alamat User</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="editbiomitra-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/user/editbiomitra, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="editbiomitra-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#editbiomitra-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#editbiomitra-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#editbiomitra-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="editbiomitra-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Biodata Berhasil di Update",
+    "data": {
+        "email_mitra": "mitra@gmail.com",
+        "fname_mitra": "mitra",
+        "lname_mitra": "mitra",
+        "nik_mitra": "3303043007960002",
+        "tanggallahir_mitra": "1999-09-10",
+        "id_kelurahan": "1101010001",
+        "alamatlengkap_mitra": "mitra",
+        "nowa_mitra": "6285702015554",
+        "datemodified_mitra": "2019-12-24 06:33:19"
+    }
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="editbiomitra-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="editbiomitra-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+							<tr>
+                                <td>message</td>
+                                <td>String</td>
+                                <td>Pesan Berhasil atau Tidak</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
                             </tr>
                             </tbody>
                         </table>

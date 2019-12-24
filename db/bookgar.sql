@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2019 at 10:13 AM
+-- Generation Time: Dec 24, 2019 at 12:40 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -7989,15 +7989,24 @@ CREATE TABLE `tb_mitra` (
   `email_mitra` varchar(255) DEFAULT NULL,
   `fname_mitra` varchar(255) DEFAULT NULL,
   `lname_mitra` varchar(255) DEFAULT NULL,
-  `nik_mitra` int(20) DEFAULT NULL,
+  `nik_mitra` varchar(20) DEFAULT NULL,
   `tanggallahir_mitra` date DEFAULT NULL,
   `id_kelurahan` char(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `alamatlengkap_mitra` longtext,
-  `nowa_mitra` int(15) DEFAULT NULL,
+  `nowa_mitra` varchar(15) DEFAULT NULL,
   `password_mitra` longtext,
   `datecreated_mitra` datetime(6) DEFAULT NULL,
   `datemodified_mitra` datetime(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_mitra`
+--
+
+INSERT INTO `tb_mitra` (`id`, `email_mitra`, `fname_mitra`, `lname_mitra`, `nik_mitra`, `tanggallahir_mitra`, `id_kelurahan`, `alamatlengkap_mitra`, `nowa_mitra`, `password_mitra`, `datecreated_mitra`, `datemodified_mitra`) VALUES
+(1, 'mit@gmail.com', 'l', 'l', '2147483647', '2019-12-24', '1101010001', 'kjhk', '6285702015553', NULL, '2019-12-24 17:05:21.000000', '2019-12-24 17:05:22.000000'),
+(2, 'mitra@gmail.com', 'mitra', 'mitra', '3303043007960002', '1999-09-10', '1101010001', 'mitra', '6285702015554', NULL, '2019-12-24 17:05:21.000000', '2019-12-24 06:33:19.000000'),
+(6, 'ss@gmail.com', 'richdd', 'brian', '3303043007960001', '1999-09-09', '1101010001', 'sssd', '6285702015553', '$2y$10$3JxhPA4NjsA2X7nLHK5et.O0P4yMFMRKEOA2ADJhuKoJjcvGO.chO', '2019-12-24 06:03:26.000000', '2019-12-24 06:03:26.000000');
 
 -- --------------------------------------------------------
 
@@ -8020,7 +8029,8 @@ INSERT INTO `tb_otp` (`id`, `nowa_val`, `otp_val`, `createdtime_val`) VALUES
 (19, '6285702015553', '6152', '2019-12-02 10:19:14.000000'),
 (20, '6285702015553', '7406', '2019-12-04 07:52:53.000000'),
 (21, '6285702015553', '5230', '2019-12-04 08:00:26.000000'),
-(22, '6285702015553', '4593', '2019-12-04 08:16:24.000000');
+(22, '6285702015553', '4593', '2019-12-04 08:16:24.000000'),
+(23, '6285702015553', '1246', '2019-12-24 05:18:38.000000');
 
 -- --------------------------------------------------------
 
@@ -8139,7 +8149,7 @@ CREATE TABLE `tb_user` (
 
 INSERT INTO `tb_user` (`id`, `email_user`, `fname_user`, `lname_user`, `tanggallahir_user`, `id_kelurahan`, `alamatlengkap_user`, `nowa_user`, `password_user`, `datecreated_user`, `datemodified_user`, `saldo_user`) VALUES
 (11, 'solehn.hayat@gmail.com', 'Soleh Nur', 'Hayat', '2008-08-30', '1101010001', 'Selanegara', '6285702015553', '$2y$10$0o6GKXfCLghflG.Mp5qpY.uy6lM0OccOyfd/zcpV/9h39YBZjTBDi', '2019-12-02 12:36:09.000000', '2019-12-02 12:36:09.000000', NULL),
-(12, 'solehn.hayat@gmail.com', 'Soleh Nur', 'Hayat', '2008-08-30', '1101010001', 'Selanegara', '6285702015553', '$2y$10$hfok0Tk.hOfCAJ9km7IpuuwNiLS6Ga9DDqsjFb5cf5p1Ui5XB2VDq', '2019-12-02 12:38:50.000000', '2019-12-02 12:38:50.000000', NULL),
+(12, 'ss@gmail.com', 'richdd', 'brian', '1999-09-09', '1101010001', 'sssd', '6285702015553', '$2y$10$hfok0Tk.hOfCAJ9km7IpuuwNiLS6Ga9DDqsjFb5cf5p1Ui5XB2VDq', '2019-12-02 12:38:50.000000', '2019-12-24 05:27:49.000000', NULL),
 (20, 'ss@gmail.com', 'rich', 'brian', '1999-09-09', '1101010001', 'sssd', '08767676767', NULL, NULL, '2019-12-24 03:53:11.000000', NULL),
 (21, 'ss@gmail.com', 'rich', 'brian', '1999-09-09', '1101010001', 'sssd', '08767676767', NULL, NULL, '2019-12-24 03:54:32.000000', NULL),
 (22, 'ss@gmail.com', 'rich', 'brian', '1999-09-09', '1101010001', 'sssd', '08767676767', NULL, NULL, '2019-12-24 03:56:12.000000', NULL),
@@ -87765,13 +87775,13 @@ ALTER TABLE `tb_kunjungan`
 -- AUTO_INCREMENT for table `tb_mitra`
 --
 ALTER TABLE `tb_mitra`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tb_otp`
 --
 ALTER TABLE `tb_otp`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `tb_rekening_mitra`

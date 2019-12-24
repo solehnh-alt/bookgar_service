@@ -3,13 +3,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require APPPATH . 'libraries/REST_Controller.php';
 
-class User extends REST_Controller {
+class Mitra extends REST_Controller {
 
     function __construct()
     {
 		date_default_timezone_set('Asia/Jakarta');
         parent::__construct();
-		$this->load->model("Muser","user");
+		$this->load->model("Mmitra","mitra");
 	}
 	
 	public function getdata_get()
@@ -19,7 +19,7 @@ class User extends REST_Controller {
 			$id=$_GET['id'];
 		}
 
-		$data = $this->user->getdata($id)->result_array();
+		$data = $this->mitra->getdata($id)->result_array();
 		
         if(!empty($data)){
             $this->response([
@@ -41,7 +41,7 @@ class User extends REST_Controller {
         $nowa = $this->post('nowa'); //inputan nomor WA dari Text Edit
 
 		if(!empty($nowa)){
-			$cek = $this->user->cek_nowa(array('nowa_user'=>$nowa))->num_rows();
+			$cek = $this->mitra->cek_nowa(array('nowa_mitra'=>$nowa))->num_rows();
 			if(!empty($cek)){
 				$this->set_response([
 					'status' => FALSE,
@@ -71,7 +71,7 @@ class User extends REST_Controller {
         ];
 		
 		if(!empty($this->post('nowa'))){
-			$this->user->add_otp($data);
+			$this->mitra->add_otp($data);
 				
 				$curl = curl_init();
 
@@ -109,7 +109,7 @@ class User extends REST_Controller {
 		$kode = $this->post('kode');
 		
 		if(!empty($kode)){
-			$cek = $this->user->cek_otp(array('otp_val'=>$kode))->row_array();
+			$cek = $this->mitra->cek_otp(array('otp_val'=>$kode))->row_array();
 			if(!empty($cek)){
 				$waktu = $cek['createdtime_val'];
 				$menit = substr($cek['createdtime_val'],14,2);
@@ -118,22 +118,22 @@ class User extends REST_Controller {
 				if($menitnow-$menit<=5){
 					
 					$data = [
-						'email_user' 			=> $this->post('email'),
-						'fname_user' 			=> $this->post('fname'),
-						'lname_user' 			=> $this->post('lname'),
-						'tanggallahir_user' 	=> $this->post('tgl_lahir'),
+						'email_mitra' 			=> $this->post('email'),
+						'fname_mitra' 			=> $this->post('fname'),
+						'lname_mitra' 			=> $this->post('lname'),
+						'nik_mitra'				=> $this->post('nik_mitra'),
+						'tanggallahir_mitra' 	=> $this->post('tgl_lahir'),
 						'id_kelurahan' 			=> $this->post('id_kelurahan'),
-						'alamatlengkap_user' 	=> $this->post('alamat'),
-						'nowa_user' 			=> $this->post('nowa'),
-						'password_user' 		=> password_hash($this->post('password'),PASSWORD_DEFAULT),
-						'datecreated_user' 		=> date("Y-m-d h:i:s"),
-						'datemodified_user' 	=> date("Y-m-d h:i:s"),
+						'alamatlengkap_mitra' 	=> $this->post('alamat'),
+						'nowa_mitra' 			=> $this->post('nowa'),
+						'password_mitra' 		=> password_hash($this->post('password'),PASSWORD_DEFAULT),
+						'datecreated_mitra' 	=> date("Y-m-d h:i:s"),
+						'datemodified_mitra' 	=> date("Y-m-d h:i:s"),
 					];
 					
 					
-					
 					if(!empty($data)){
-						$register=$this->user->register($data);
+						$register=$this->mitra->register($data);
 						$this->response([
 							'status' 	=> TRUE,
 							'message' 	=> 'Verifikasi dan Registrasi Berhasil',
@@ -191,19 +191,19 @@ class User extends REST_Controller {
 		if(empty($username) and empty($password)){
 			$this->response([
 				'status' => FALSE,
-				'message' => "Username dan Password Harus di Isi"
+				'message' => "Username Mitra dan Password Harus di Isi"
 			], REST_Controller::HTTP_NOT_FOUND);
 		} else {
 			
-			$resuser = $this->user->cek_user($username);
-			if($resuser->num_rows() < 1){
+			$resmitra = $this->mitra->cek_mitra($username);
+			if($resmitra->num_rows() < 1){
 				$this->response([
 					'status' => FALSE,
-					'message' => "Username Tidak Terdaftar"
+					'message' => "Email Mitra Tidak Terdaftar"
 				], REST_Controller::HTTP_NOT_FOUND);
 			} else {
-				$r = $resuser->row();
-				$pass = $r->password_user;
+				$r = $resmitra->row();
+				$pass = $r->password_mitra;
 				$verify = password_verify($password,$pass);
 				if(!$verify){
 					$this->response([
@@ -214,7 +214,7 @@ class User extends REST_Controller {
 					$data = array(
 						'logged_in'		=> TRUE,
 						'id'			=> $r->id,
-						'username'		=> $r->email_user,
+						'email'		=> $r->email_mitra,
 					);
 					$this->response([
 						'status' 	=> TRUE,
@@ -226,21 +226,23 @@ class User extends REST_Controller {
 		}
 	}
 
-	public function editbiodata_post(){
+	public function editbiomitra_post(){
 		$where=$this->post('id');
 		
 		$data = [
-			'email_user' 			=> $this->post('email'),
-			'fname_user' 			=> $this->post('fname'),
-			'lname_user' 			=> $this->post('lname'),
-			'tanggallahir_user' 	=> $this->post('tgl_lahir'),
+			'email_mitra' 			=> $this->post('email'),
+			'fname_mitra' 			=> $this->post('fname'),
+			'lname_mitra' 			=> $this->post('lname'),
+			'nik_mitra'				=> $this->post('nik_mitra'),
+			'tanggallahir_mitra' 	=> $this->post('tgl_lahir'),
 			'id_kelurahan' 			=> $this->post('id_kelurahan'),
-			'alamatlengkap_user' 	=> $this->post('alamat')
-			'datemodified_user' 	=> date("Y-m-d h:i:s"),
+			'alamatlengkap_mitra' 	=> $this->post('alamat'),
+			'nowa_mitra' 			=> $this->post('nowa'),
+			'datemodified_mitra' 	=> date("Y-m-d h:i:s"),
 		];
 
 
-		$update=$this->user->editbiodata($data,$where);
+		$update=$this->mitra->editbiodata($data,$where);
         if($update){
             $this->response([
                 'status' 	=> TRUE,
