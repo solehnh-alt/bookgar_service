@@ -235,7 +235,7 @@ class User extends REST_Controller {
 			'lname_user' 			=> $this->post('lname'),
 			'tanggallahir_user' 	=> $this->post('tgl_lahir'),
 			'id_kelurahan' 			=> $this->post('id_kelurahan'),
-			'alamatlengkap_user' 	=> $this->post('alamat')
+			'alamatlengkap_user' 	=> $this->post('alamat'),
 			'datemodified_user' 	=> date("Y-m-d h:i:s"),
 		];
 
