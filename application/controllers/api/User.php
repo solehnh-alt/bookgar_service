@@ -10,6 +10,27 @@ class User extends REST_Controller {
 		date_default_timezone_set('Asia/Jakarta');
         parent::__construct();
 		$this->load->model("Muser","user");
+	}
+	
+	public function getdata_get()
+    {
+		$id=$_GET['id'];
+
+		$data = $this->user->getdata($id)->result_array();
+		
+        if(!empty($data)){
+            $this->response([
+                'status' 	=> TRUE,
+                'message' 	=> 'Data Ada',
+                'data'		=> $data
+            ], REST_Controller::HTTP_OK);
+        }else{
+            $this->response([
+                'status' => FALSE,
+                'message' => "Tidak Ada Data"
+            ], REST_Controller::HTTP_NOT_FOUND);
+        }
+        
     }
 	
 	public function ceknowa_post()
@@ -20,7 +41,7 @@ class User extends REST_Controller {
 			$cek = $this->user->cek_nowa(array('nowa_user'=>$nowa))->num_rows();
 			if(!empty($cek)){
 				$this->set_response([
-					'status' => TRUE,
+					'status' => FALSE,
 					'message' => $nowa." Sudah Terdaftar"
 					] , REST_Controller::HTTP_OK);
 			}else{
@@ -46,7 +67,7 @@ class User extends REST_Controller {
             'createdtime_val' 	=> date("Y-m-d h:i:s")
         ];
 		
-		if(!empty($data)){
+		if(!empty($this->post('nowa'))){
 			$this->user->add_otp($data);
 				
 				$curl = curl_init();
@@ -201,5 +222,34 @@ class User extends REST_Controller {
 			}
 		}
 	}
-	
+
+	public function editbiodata_post(){
+		$where=$this->post('id');
+		
+		$data = [
+			'email_user' 			=> $this->post('email'),
+			'fname_user' 			=> $this->post('fname'),
+			'lname_user' 			=> $this->post('lname'),
+			'tanggallahir_user' 	=> $this->post('tgl_lahir'),
+			'id_kelurahan' 			=> $this->post('id_kelurahan'),
+			'alamatlengkap_user' 	=> $this->post('alamat'),
+			'nowa_user' 			=> $this->post('nowa'),
+			'datemodified_user' 	=> date("Y-m-d h:i:s"),
+		];
+
+
+		$update=$this->user->editbiodata($data,$where);
+        if($update){
+            $this->response([
+                'status' 	=> TRUE,
+                'message' 	=> 'Biodata Berhasil di Update',
+                'data'		=> $data
+            ], REST_Controller::HTTP_OK);
+        }else{
+            $this->response([
+                'status' => FALSE,
+				'message' => "Biodata Gagal di Update",
+            ], REST_Controller::HTTP_NOT_FOUND);
+        }
+    }
 }

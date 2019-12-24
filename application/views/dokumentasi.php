@@ -59,10 +59,12 @@ div.sticky {
         </div>
     </div>
 </div>
-<!-- Navigation bar ends -->        <div class="content">
+<!-- Navigation bar ends -->        
+<div class="content">
 <div class="container">
 	<div class="row">
-		<div class="span3 sticky">
+		<!-- <div class="span3 sticky"> -->
+        <!-- <div class="span3 sticky">
 			<ul id="ro-doc-nav" class="nav nav-list bs-docs-sidenav">
 				<li class="active"><a href="#memulai" data-toggle="list"><i class="icon-chevron-right"></i> Memulai</a></li>
 				<li class="nav-header"><span class="b-purple">Cek Nomor Whatsaap User</span></li>
@@ -82,9 +84,21 @@ div.sticky {
 					<li class=""><a href="#cost-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i> Ringkasan</a></li>
 					<li class=""><a href="#cost-request" data-toggle="list"><i class="icon-chevron-right"></i> Request</a></li>
 					<li class=""><a href="#cost-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a></li>
+                <li class="nav-header"><span class="b-purple">Data Kelurahan</span></li>
+					<li class=""><a href="#kelurahan-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i> Ringkasan</a></li>
+					<li class=""><a href="#kelurahan-request" data-toggle="list"><i class="icon-chevron-right"></i> Request</a></li>
+					<li class=""><a href="#kelurahan-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a></li>
+                <li class="nav-header"><span class="b-purple">Data Kabupaten</span></li>
+					<li class=""><a href="#kabupaten-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i> Ringkasan</a></li>
+					<li class=""><a href="#kabupaten-request" data-toggle="list"><i class="icon-chevron-right"></i> Request</a></li>
+					<li class=""><a href="#kabupaten-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a></li>
+                <li class="nav-header"><span class="b-purple">Data Provinsi</span></li>
+					<li class=""><a href="#provinsi-ringkasan" data-toggle="list"><i class="icon-chevron-right"></i> Ringkasan</a></li>
+					<li class=""><a href="#provinsi-request" data-toggle="list"><i class="icon-chevron-right"></i> Request</a></li>
+					<li class=""><a href="#provinsi-response" data-toggle="list"><i class="icon-chevron-right"></i> Response</a></li>
 			</ul>
-		</div>
-		<div class="span9">
+		</div> -->
+		<div class="span12">
         <div class="list-content">
             <section class="ro-docs" id="memulai">
                 <h3>Dokumentasi API BookGar</h3>
@@ -117,7 +131,7 @@ div.sticky {
                             <tbody>
                             <tr>
                                 <td>POST</td>
-                                <td>http://domain.com/bookgar_service/api/user/ceknowa</td>
+                                <td>http://devwpa.com/api/user/ceknowa</td>
                             </tr>
                             </tbody>
                         </table>
@@ -154,7 +168,7 @@ div.sticky {
 <code>
 StringRequest strReq = new StringRequest(
 	Request.Method.POST, 
-	http://domain.com/bookgar_service/api/user/ceknowa , 
+	http://devwpa.com/api/user/ceknowa , 
 	new Response.Listener<String>(){
 		
 	}
@@ -247,13 +261,13 @@ StringRequest strReq = new StringRequest(
                             <thead>
                             <tr>
                                 <td>Method</td>
-                                <td>POST</td>
+                                <td>URL</td>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>GET</td>
-                                <td>http://domain.com/bookgar_service/api/user/kirimotp</td>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/user/kirimotp</td>
                             </tr>
                             </tbody>
                         </table>
@@ -290,7 +304,7 @@ StringRequest strReq = new StringRequest(
 <code>
 StringRequest strReq = new StringRequest(
 	Request.Method.POST, 
-	http://domain.com/bookgar_service/api/user/kirimotp , 
+	http://devwpa.com/api/user/kirimotp , 
 	new Response.Listener<String>(){
 		
 	}
@@ -392,8 +406,8 @@ StringRequest strReq = new StringRequest(
                             </thead>
                             <tbody>
                             <tr>
-                                <td>GET</td>
-                                <td>http://domain.com/bookgar_service/api/user/verifikasi</td>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/user/verifikasi</td>
                             </tr>
                             </tbody>
                         </table>
@@ -480,7 +494,7 @@ StringRequest strReq = new StringRequest(
 <code>
 StringRequest strReq = new StringRequest(
 	Request.Method.POST, 
-	http://domain.com/bookgar_service/api/user/verifikasi, 
+	http://devwpa.com/api/user/verifikasi, 
 	new Response.Listener<String>(){
 		
 	}
@@ -592,7 +606,7 @@ StringRequest strReq = new StringRequest(
                             <tbody>
                             <tr>
                                 <td>POST</td>
-                                <td>http://localhost/bookgar_service/api/user/login</td>
+                                <td>http://devwpa.com/api/user/login</td>
                             </tr>
                             </tbody>
                         </table>
@@ -632,7 +646,7 @@ StringRequest strReq = new StringRequest(
 <code>
 StringRequest strReq = new StringRequest(
 	Request.Method.POST, 
-	http://domain.com/bookgar_service/api/user/login, 
+	http://devwpa.com/api/user/login, 
 	new Response.Listener<String>(){
 		
 	}
@@ -710,6 +724,387 @@ StringRequest strReq = new StringRequest(
                                 <td>data</td>
                                 <td>String</td>
                                 <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="kelurahan-ringkasan">
+			<hr/>
+                <h3>Get Data Kelurahan</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method getdata dalam kelurahan ini digunakan untuk mengambil semua data kelurahan dari dalam database.</p>
+            </section>
+            <section id="kelurahan-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#kelurahan-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#kelurahan-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#kelurahan-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="kelurahan-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/kelurahan/getdata</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="kelurahan-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="kelurahan-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/kelurahan/getdata, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="kelurahan-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#kelurahan-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#kelurahan-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#kelurahan-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="kelurahan-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status":true,
+    "message":"Data Ada",
+    "data":[
+                {
+                    "id":"1101010",
+                    "regency_id":"1101",
+                    "name":"TEUPAH SELATAN"
+                }
+            ]
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="kelurahan-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="kelurahan-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>int</td>
+                                <td>ID Kelurahan</td>
+                            </tr>
+                            <tr>
+                                <td>regency_id</td>
+                                <td>int</td>
+                                <td>ID Kabupaten</td>
+                            </tr>
+							<tr>
+                                <td>name</td>
+                                <td>String</td>
+                                <td>Nama Kelurahan</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="kebupaten-ringkasan">
+			<hr/>
+                <h3>Get Data Kabupaten</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method getdata dalam kabupaten ini digunakan untuk mengambil semua data kabupaten dari dalam database.</p>
+            </section>
+            <section id="kebupaten-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#kebupaten-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#kebupaten-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#kebupaten-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="kebupaten-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/kabupaten/getdata</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="kebupaten-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="kebupaten-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/kabupaten/getdata, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="kebupaten-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#kebupaten-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#kebupaten-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#kebupaten-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="kebupaten-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status":true,
+    "message":"Data Ada",
+    "data":[
+                {
+                    "id":"1101",
+                    "province_id":"11",
+                    "name":"KABUPATEN SIMEULUE"                
+                }
+            ]
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="kebupaten-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="kebupaten-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>int</td>
+                                <td>ID Kabupaten</td>
+                            </tr>
+                            <tr>
+                                <td>province_id</td>
+                                <td>int</td>
+                                <td>ID Provinsi</td>
+                            </tr>
+							<tr>
+                                <td>name</td>
+                                <td>String</td>
+                                <td>Nama Kabupaten</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="provinsi-ringkasan">
+			<hr/>
+                <h3>Get Data Provinsi</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method getdata dalam provinsi ini digunakan untuk mengambil semua data provinsi dari dalam database.</p>
+            </section>
+            <section id="provinsi-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#provinsi-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#provinsi-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#provinsi-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="provinsi-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/provinsi/getdata</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="provinsi-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="provinsi-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/provinsi/getdata, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="provinsi-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#provinsi-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#provinsi-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#provinsi-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="provinsi-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status":true,
+    "message":"Data Ada",
+    "data":[
+                {
+                    "id":"11",
+                    "name":"ACEH"               
+                }
+            ]
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="provinsi-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="provinsi-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>int</td>
+                                <td>ID Provinsi</td>
+                            </tr>
+							<tr>
+                                <td>name</td>
+                                <td>String</td>
+                                <td>Nama Kabupaten</td>
                             </tr>
                             </tbody>
                         </table>
