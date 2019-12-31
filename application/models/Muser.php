@@ -30,12 +30,12 @@ class Muser extends CI_Model
 		if(empty($id)){
 			return $this->db
 			->select('email_user,fname_user,lname_user,tanggallahir_user,id_kelurahan,alamatlengkap_user,nowa_user,saldo_user')
-			->get('tb_user');
+			->get('tb_user')->first_row();
 		}else{
 			return $this->db
 			->select('email_user,fname_user,lname_user,tanggallahir_user,id_kelurahan,alamatlengkap_user,nowa_user,saldo_user')
 			->where('id',$id)
-			->get('tb_user');
+			->get('tb_user')->result_array();
 		}
 	}
 

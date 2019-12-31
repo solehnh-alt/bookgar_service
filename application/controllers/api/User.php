@@ -19,7 +19,7 @@ class User extends REST_Controller {
 			$id=$_GET['id'];
 		}
 
-		$data = $this->user->getdata($id)->result_array();
+		$data = $this->user->getdata($id);
 		
         if(!empty($data)){
             $this->response([
