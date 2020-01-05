@@ -909,6 +909,135 @@ StringRequest strReq = new StringRequest(
                     </div>
                 </div>
             </section>
+            <section id="desa-ringkasan">
+			<hr/>
+                <h3>Get Data Desa</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method getdata dalam desa ini digunakan untuk mengambil semua data desa dari dalam database.</p>
+            </section>
+            <section id="desa-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#desa-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#desa-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#desa-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="desa-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/desa/getdata</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="desa-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="desa-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/desa/getdata, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="desa-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#desa-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#desa-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#desa-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="desa-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status":true,
+    "message":"Data Ada",
+    "data":[
+                {
+                    "id": "1101010001",
+                    "district_id": "1101010",
+                    "name": "LATIUNG"
+                }
+            ]
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="desa-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="desa-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>int</td>
+                                <td>ID Desa</td>
+                            </tr>
+                            <tr>
+                                <td>district_id</td>
+                                <td>int</td>
+                                <td>ID Kelurahan</td>
+                            </tr>
+							<tr>
+                                <td>name</td>
+                                <td>String</td>
+                                <td>Nama Desa</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
             <section id="kelurahan-ringkasan">
 			<hr/>
                 <h3>Get Data Kelurahan</h3>
