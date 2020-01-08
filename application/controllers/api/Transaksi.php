@@ -10,7 +10,8 @@ class Transaksi extends REST_Controller {
 		date_default_timezone_set('Asia/Jakarta');
         parent::__construct();
 		$this->load->model("Mtransaksi","transaksi");
-		$this->load->model("Mcekpembayaran","cekpembayaran");
+        $this->load->model("Mcekpembayaran","cekpembayaran");
+        $this->load->model("Mkodeuniktf", "kodeuniktf");
     }
 	
 	public function save_post()
@@ -169,25 +170,21 @@ class Transaksi extends REST_Controller {
 
     public function cekpembayaran_post()
     {
-
+        // $totaltf = $this->post('totaltf');
+        // $kodeunik= substr($totaltf, -3);
+        // $cekkode=$this->kodeuniktf->cekkode($kodeunik);
+        $id = $this->post('id_transaksi');
+        $cekkode=$this->kodeuniktf->cekkode($id);
         $data = [
-            'id_tempat' 			=> $this->post('id_tempat'),
-            'id_carabayar' 			=> $this->post('id_carabayar'),
-            'id_jadwal' 			=> $this->post('id_jadwal'),
-            'tgl_jadwal' 	        => $this->post('tgl_jadwal'),
-            'waktu_transaksi' 	    => date("Y-m-d h:i:s"),
-            'jumlah_transaksi' 	    => $this->post('jumlah_transaksi'),
-            'diskon_transaksi' 	    => $this->post('diskon_transaksi'),
-            'potongan_transaksi' 	=> $this->post('potongan_transaksi'),
-            'nominalreal' 	        => $this->post('nominalreal'),
+
 
 		];
 
-        if($update){
+        if($cekkode){
             $this->response([
                 'status' 	=> TRUE,
                 'message' 	=> 'Berhasil di update',
-                'data'		=> $data
+                'data'		=> $cekkode
             ], REST_Controller::HTTP_OK);
         }else{
             $this->response([

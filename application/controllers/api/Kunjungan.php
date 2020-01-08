@@ -3,24 +3,27 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 require APPPATH . 'libraries/REST_Controller.php';
 
-class Jenisbank extends REST_Controller
+class Kunjungan extends REST_Controller
 {
 
     function __construct()
     {
         date_default_timezone_set('Asia/Jakarta');
         parent::__construct();
-        $this->load->model("Mjenisbank", "jenisbank");
+        $this->load->model("Mkunjungan", "kunjungan");
     }
 
     public function save_post()
     {
         $data = [
-            'namabank'         => $this->post('namabank')
+            'id_eticket'         => $this->post('id_eticket'),
+            'id_user'            => $this->post('id_user'),
+            'id_tempat'          => $this->post('id_tempat'),
+            'waktumasuk'         => date("Y-m-d h:i:s")
         ];
 
 
-        $update = $this->jenisbank->save($data);
+        $update = $this->kunjungan->save($data);
         if ($update) {
             $this->response([
                 'status'     => TRUE,
@@ -39,10 +42,11 @@ class Jenisbank extends REST_Controller
     {
         $id = $this->post('id');
         $data = [
-            'namabank'         => $this->post('namabank')
+            'id_eticket'         => $this->post('id_eticket'),
+            'id_tempat'          => $this->post('id_tempat')
         ];
 
-        $update = $this->jenisbank->update(array('id' => $id), $data);
+        $update = $this->kunjungan->update(array('id' => $id), $data);
         if ($update) {
             $this->response([
                 'status'     => TRUE,
@@ -61,7 +65,7 @@ class Jenisbank extends REST_Controller
     {
         $id = $this->post('id');
 
-        $delete = $this->jenisbank->delete_by_id($id);
+        $delete = $this->kunjungan->delete_by_id($id);
         if ($delete) {
             $this->response([
                 'status'     => TRUE,
@@ -81,7 +85,7 @@ class Jenisbank extends REST_Controller
         if (!empty($_GET['id'])) {
             $id = $_GET['id'];
         }
-        $data = $this->jenisbank->getdata($id);
+        $data = $this->kunjungan->getdata($id);
 
         if (!empty($data)) {
             $this->response([

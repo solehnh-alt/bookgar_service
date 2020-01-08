@@ -6800,6 +6800,1757 @@ StringRequest strReq = new StringRequest(
                     </div>
                 </div>
             </section>
+
+            <!--Table Galeri Tempat-->
+            <section id="galeri-ringkasan">
+			<hr/>
+                <h3><strong>Menambahkan Galeri Tempat</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "save" Digunakan untuk menambahkan Galeri Tempat  </p>
+            </section>
+            <section id="galeri-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#galeri-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#galeri-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#galeri-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="galeri-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/galeritempat/save</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="galeri-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_tempat</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Id Tempat</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>source</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Lokasi penyimpanan gambar</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>keterangan</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>keterangan gambar</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    <div class="tab-pane fade" id="galeri-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/galeritempat/save , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="galeri-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#galeri-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#galeri-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#galeri-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="galeri-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di tambahkan",
+    "data": {
+        "id_tempat": "3",
+        "source": "upload/gambar1.jpg",
+        "keterangan": "gambar1",
+        "createdtime": "2020-01-05 02:40:00"
+    }
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="galeri-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Gagal di tambahkan"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="galeri-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="update-galeri-ringkasan">
+			<hr/>
+                <h3><strong>Edit Data Galeri Tempat</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "update" digunakan untuk merubah data galeri tempat  </p>
+            </section>
+            <section id="update-galeri-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#update-galeri-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#update-galeri-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#update-galeri-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="update-galeri-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/galeritempat/update</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="update-galeri-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Id Galeri Tempat</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_tempat</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Id Tempat</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>source</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>Lokasi penyimpanan gambar</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>keterangan</td>
+                                <td>Ya</td>
+                                <td>String</td>
+                                <td>keterangan gambar</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="update-galeri-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/galeritempat/update , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="update-galeri-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#update-galeri-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#update-galeri-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#update-galeri-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="update-galeri-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di update",
+    "data": {
+        "id_tempat": "3",
+        "source": "upload/gambar2.jpg",
+        "keterangan": "gambar2"
+    }
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="update-galeri-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Gagal di update"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="update-galeri-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="delete-galeri-ringkasan">
+			<hr/>
+                <h3><strong>Hapus Data Galeri Tempat</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "delete" Digunakan untuk menghapus Galeri Tempat  </p>
+            </section>
+            <section id="delete-eticket-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#delete-galeri-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#delete-galeri-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#delete-galeri-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="delete-galeri-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/galeritempat/delete</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="delete-galeri-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID Galeri tempat</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="delete-galeri-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/galeritempat/delete , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="delete-galeri-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#delete-galeri-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#delete-galeri-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#delete-galeri-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="delete-galeri-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di delete"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="delete-galeri-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Gagal di delete"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="delete-galeri-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="getdata-galeri-ringkasan">
+			<hr/>
+                <h3><strong>Get Data Galeri Tempat</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "getdata" Digunakan untuk menampilkan Galeri Tempat berdasarkan id dari database  </p>
+            </section>
+            <section id="getdata-galeri-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#getdata-galeri-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#getdata-galeri-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#getdata-galeri-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="getdata-galeri-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/galeritempat/getdata?id=2</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-galeri-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>id galeri tempat</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Digunakan untuk mendapatkan data berdasarkan id. Jika ingin mendapatkan semua data hilangkan ?id=4
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-galeri-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/galeritempat/getdata?id=2 , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="getdata-galeri-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#getdata-galeri-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#getdata-galeri-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#getdata-galeri-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="getdata-galeri-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Data Ada",
+    "data": [
+        {
+            "id": "2",
+            "id_tempat": "3",
+            "source": "upload/gambar2.jpg",
+            "keterangan": "gambar2",
+            "createdtime": "2020-01-05 02:42:07.000000"
+        }
+    ]
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-galeri-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Tidak ada data "
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-galeri-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!--Table Kodeuniktf-->
+            <section id="kodeuniktf-ringkasan">
+			<hr/>
+                <h3><strong>Menambahkan Kode Unik Trasfer</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "save" Digunakan untuk menambahkan Kode Unik Transfer </p>
+            </section>
+            <section id="kodeuniktf-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#kodeuniktf-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#kodeuniktf-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#kodeuniktf-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="kodeuniktf-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/kodeuniktf/save</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="kodeuniktf-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Id Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>kode_unik</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Kode unik tranfer</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>total_transfer</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Jumlah transfer</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>createdtime</td>
+                                <td>Ya</td>
+                                <td>DateTime</td>
+                                <td>Waktu mulai aktif kode unik transfer</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>expiredtime</td>
+                                <td>Ya</td>
+                                <td>DateTime</td>
+                                <td>Batas waktu kadaluarsa kode unik transfer</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>status</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Status kode unik transfer</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    <div class="tab-pane fade" id="kodeuniktf-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/kodeuniktf/save , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="kodeuniktf-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#kodeuniktf-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#kodeuniktf-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#kodeuniktf-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="kodeuniktf-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di tambahkan",
+    "data": {
+        "id_transaksi": "1",
+        "kode_unik": "640",
+        "total_transfer": "90640",
+        "createdtime": "2020-01-05 03:14:32",
+        "expiredtime": "2020-01-05 03:23:51.000000",
+        "status": "0"
+    }
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="kodeuniktf-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Gagal di tambahkan"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="kodeuniktf-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="update-kodeuniktf-ringkasan">
+			<hr/>
+                <h3><strong>Edit Data Kode Unik Transfer</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "update" digunakan untuk merubah data kode unik transfer  </p>
+            </section>
+            <section id="update-kodeuniktf-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#update-kodeuniktf-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#update-kodeuniktf-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#update-kodeuniktf-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="update-kodeuniktf-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/kodeuniktf/update</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="update-kodeuniktf-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Id Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>kode_unik</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Kode unik transfer</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>total_transfer</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Jumlah transfer</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>createdtime</td>
+                                <td>Ya</td>
+                                <td>DateTime</td>
+                                <td>Waktu mulai aktif kode unik transfer</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>expiredtime</td>
+                                <td>Ya</td>
+                                <td>DateTime</td>
+                                <td>Batas waktu kadaluarsa kode unik transfer</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>status</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Status kode unik transfer</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="update-kodeuniktf-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/kodeuniktf/update , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="update-kodeuniktf-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#update-kodeuniktf-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#update-kodeuniktf-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#update-kodeuniktf-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="update-kodeuniktf-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di update",
+    "data": {
+        "id_transaksi": "1",
+        "kode_unik": "640",
+        "total_transfer": "90640",
+        "expiredtime": "2020-01-05 03:23:51.000000",
+        "status": "0"
+    }
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="update-kodeuniktf-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Gagal di update"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="update-kodeuniktf-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="delete-kodeuniktf-ringkasan">
+			<hr/>
+                <h3><strong>Hapus Data Kode Unik Trasfer</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "delete" Digunakan untuk menghapus Kode Unik Transfer  </p>
+            </section>
+            <section id="delete-kodeuniktf-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#delete-kodeuniktf-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#delete-kodeuniktf-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#delete-kodeuniktf-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="delete-kodeuniktf-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/kodeuniktf/delete</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="delete-kodeuniktf-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID Kode unik transfer</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="delete-kodeuniktf-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/kodeuniktf/delete , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="delete-kodeuniktf-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#delete-kodeuniktf-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#delete-kodeuniktf-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#delete-kodeuniktf-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="delete-kodeuniktf-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di delete"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="delete-kodeuniktf-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Gagal di delete"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="delete-kodeuniktf-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="getdata-kodeuniktf-ringkasan">
+			<hr/>
+                <h3><strong>Get Data Kode Unik Transfer</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "getdata" Digunakan untuk menampilkan Kode Unik Transfer berdasarkan id dari database  </p>
+            </section>
+            <section id="getdata-kodeuniktf-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#getdata-kodeuniktf-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#getdata-kodeuniktf-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#getdata-kodeuniktf-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="getdata-kodeuniktf-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/kodeuniktf/getdata?id=4</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-kodeuniktf-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>id kode unik transfer</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Digunakan untuk mendapatkan data berdasarkan id. Jika ingin mendapatkan semua data hilangkan ?id=4
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-kodeuniktf-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/kodeuniktf/getdata?id=4 , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="getdata-kodeuniktf-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#getdata-kodeuniktf-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#getdata-kodeuniktf-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#getdata-kodeuniktf-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="getdata-kodeuniktf-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Data Ada",
+    "data": [
+        {
+            "id": "4",
+            "id_transaksi": "1",
+            "kode_unik": "640",
+            "total_transfer": "90640",
+            "createdtime": "2020-01-05 03:14:32.000000",
+            "expiredtime": "2020-01-05 03:23:51.000000",
+            "status": "0"
+        }
+    ]
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-kodeuniktf-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Tidak ada data "
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-kodeuniktf-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--Table Kunjungan -->
+            <section id="kunjungan-ringkasan">
+			<hr/>
+                <h3><strong>Menambahkan Kunjungan</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "save" Digunakan untuk menambahkan Kunjungan </p>
+            </section>
+            <section id="kunjungan-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#kunjungan-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#kunjungan-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#kunjungan-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="kunjungan-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/kunjungan/save</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="kunjungan-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_eticket</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Id Etiket</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_user</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_tempat</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID Tempat</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    <div class="tab-pane fade" id="Kunjungan-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/Kunjungan/save , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="Kunjungan-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#Kunjungan-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#Kunjungan-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#Kunjungan-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="Kunjungan-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di tambahkan",
+    "data": {
+        "id_eticket": "2",
+        "id_user": "11",
+        "id_tempat": "3",
+        "waktumasuk": "2020-01-06 02:19:32"
+    }
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="Kunjungan-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Gagal di tambahkan"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="Kunjungan-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="update-Kunjungan-ringkasan">
+			<hr/>
+                <h3><strong>Edit Data Kunjungan</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "update" digunakan untuk merubah data kunjungan  </p>
+            </section>
+            <section id="update-Kunjungan-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#update-Kunjungan-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#update-Kunjungan-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#update-Kunjungan-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="update-Kunjungan-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/Kunjungan/update</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="update-Kunjungan-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_eticket</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Id Eticket</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_user</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_tempat</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID Tempat</td>
+                            </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="update-Kunjungan-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/Kunjungan/update , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="update-Kunjungan-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#update-Kunjungan-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#update-Kunjungan-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#update-Kunjungan-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="update-Kunjungan-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di update",
+    "data": {
+        "id_eticket": "3",
+        "id_tempat": "3"
+    }
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="update-kunjungan-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Gagal di update"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="update-kunjungan-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="delete-kunjungan-ringkasan">
+			<hr/>
+                <h3><strong>Hapus Data Kunjungan</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "delete" Digunakan untuk menghapus Kunjungan  </p>
+            </section>
+            <section id="delete-kunjungan-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#delete-kunjungan-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#delete-kunjungan-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#delete-kunjungan-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="delete-kunjungan-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/kunjungan/delete</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="delete-kunjungan-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID Kode unik transfer</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="delete-kunjungan-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/kunjungan/delete , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="delete-kunjungan-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#delete-kunjungan-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#delete-kunjungan-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#delete-kunjungan-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="delete-kunjungan-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di delete"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="delete-kunjungan-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Gagal di delete"
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="delete-kunjungan-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="getdata-kunjungan-ringkasan">
+			<hr/>
+                <h3><strong>Get Data Kunjungan</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "getdata" Digunakan untuk menampilkan Kunjungan berdasarkan id dari database  </p>
+            </section>
+            <section id="getdata-kunjungan-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#getdata-kunjungan-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#getdata-kunjungan-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#getdata-kunjungan-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="getdata-kunjungan-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/kunjungan/getdata?id=4</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-kunjungan-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>id kode unik transfer</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Digunakan untuk mendapatkan data berdasarkan id. Jika ingin mendapatkan semua data hilangkan ?id=4
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-kunjungan-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/kunjungan/getdata?id=4 , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="getdata-kunjungan-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#getdata-kunjungan-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#getdata-kunjungan-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#getdata-kunjungan-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="getdata-kunjungan-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Data Ada",
+    "data": [
+        {
+            "id": "2",
+            "id_eticket": "2",
+            "id_user": "11",
+            "id_tempat": "3",
+            "waktumasuk": "2020-01-06 02:19:32.000000"
+        }
+    ]
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-kunjungan-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": false,
+    "message": "Tidak ada data "
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="getdata-kunjungan-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </div>

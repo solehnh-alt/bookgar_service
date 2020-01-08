@@ -34,4 +34,11 @@ class Mkodeuniktf extends CI_Model
                 ->get($this->table)->result_array();
         }
     }
+
+    public function cekkode($id)
+    {
+        return $this->db
+            ->where('id_transaksi',$id)
+            ->get($this->table)->result_array();
+    }
 }

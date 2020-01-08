@@ -15,13 +15,15 @@ class Kodeuniktf extends REST_Controller
 
     public function save_post()
     {
+        $kode=$this->rand_code();
+        $total=$this->post('total_transfer')+$kode;
         $data = [
-            'id_transaksi'             => $this->post('id_transaksi'),
-            'kode_unik'         => $this->post('kode_unik'),
-            'total_transfer'         => $this->post('total_transfer'),
+            'id_transaksi'        => $this->post('id_transaksi'),
+            'kode_unik'           => $kode,
+            'total_transfer'      => $total,
             'createdtime'         => date("Y-m-d h:i:s"),
             'expiredtime'         => $this->post('expiredtime'),
-            'status'         => $this->post('status')
+            'status'              => 0
         ];
 
 
@@ -70,7 +72,7 @@ class Kodeuniktf extends REST_Controller
     {
         $id = $this->post('id');
         $data = [
-            'status'         => $this->post('status')
+            'status'         => 1
         ];
 
         $update = $this->kodeuniktf->update(array('id' => $id), $data);
@@ -87,6 +89,23 @@ class Kodeuniktf extends REST_Controller
             ], REST_Controller::HTTP_NOT_FOUND);
         }
     }
+
+    function rand_code()
+	{
+		$number = "0123456789";
+		$numberS = str_shuffle($number);
+		$subG = substr($numberS,0,5);
+		$subH = substr($numberS,6,5);
+		$subI = substr($numberS,10,5);
+		$RandCode1 = str_shuffle($subG.$subH.$subI);
+		$RandCode2 = str_shuffle($RandCode1);
+		$RandCode = $RandCode1.$RandCode2;
+		
+		$CodeEX = substr($RandCode,0,3);
+		 
+		return $CodeEX;
+	
+	}
 
     public function delete_post()
     {
@@ -127,4 +146,6 @@ class Kodeuniktf extends REST_Controller
             ], REST_Controller::HTTP_NOT_FOUND);
         }
     }
+
+    
 }

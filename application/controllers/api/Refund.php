@@ -3,24 +3,27 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 require APPPATH . 'libraries/REST_Controller.php';
 
-class Jenisbank extends REST_Controller
+class Refund extends REST_Controller
 {
-
     function __construct()
     {
         date_default_timezone_set('Asia/Jakarta');
         parent::__construct();
-        $this->load->model("Mjenisbank", "jenisbank");
+        $this->load->model("Mrefund", "refund");
     }
 
     public function save_post()
     {
         $data = [
-            'namabank'         => $this->post('namabank')
+            'id_transaksi'              => $this->post('id_transaksi'),
+            'status'                    => $this->post('status'),
+            'rekening_tujuan'           => $this->post('rekening_tujuan'),
+            'atasnama'                  => $this->post('atasnama'),
+            'nominal'                   => $this->post('nominal')
         ];
 
 
-        $update = $this->jenisbank->save($data);
+        $update = $this->refund->save($data);
         if ($update) {
             $this->response([
                 'status'     => TRUE,
@@ -39,10 +42,14 @@ class Jenisbank extends REST_Controller
     {
         $id = $this->post('id');
         $data = [
-            'namabank'         => $this->post('namabank')
+            'id_transaksi'              => $this->post('id_transaksi'),
+            'status'                    => $this->post('status'),
+            'rekening_tujuan'           => $this->post('rekening_tujuan'),
+            'atasnama'                  => $this->post('atasnama'),
+            'nominal'                   => $this->post('nominal')
         ];
 
-        $update = $this->jenisbank->update(array('id' => $id), $data);
+        $update = $this->refund->update(array('id' => $id), $data);
         if ($update) {
             $this->response([
                 'status'     => TRUE,
@@ -61,7 +68,7 @@ class Jenisbank extends REST_Controller
     {
         $id = $this->post('id');
 
-        $delete = $this->jenisbank->delete_by_id($id);
+        $delete = $this->refund->delete_by_id($id);
         if ($delete) {
             $this->response([
                 'status'     => TRUE,
@@ -81,7 +88,7 @@ class Jenisbank extends REST_Controller
         if (!empty($_GET['id'])) {
             $id = $_GET['id'];
         }
-        $data = $this->jenisbank->getdata($id);
+        $data = $this->refund->getdata($id);
 
         if (!empty($data)) {
             $this->response([

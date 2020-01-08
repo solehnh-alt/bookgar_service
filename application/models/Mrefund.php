@@ -1,8 +1,8 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Mcekpembayaran extends CI_Model
+class Mrefund extends CI_Model
 {
-    var $table = 'tb_cek_pembayaran';
+    var $table = 'tb_refund';
 
     public function save($data)
     {

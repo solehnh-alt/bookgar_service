@@ -1,13 +1,13 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Mcekpembayaran extends CI_Model
+class Mkunjungan extends CI_Model
 {
-    var $table = 'tb_cek_pembayaran';
+    var $table = 'tb_kunjungan';
 
     public function save($data)
     {
         $this->db->insert($this->table, $data);
-        return $this->db->insert_id();
+        return true;
     }
 
     public function update($where, $data)
