@@ -4200,895 +4200,7 @@ StringRequest strReq = new StringRequest(
                     </div>
                 </div>
             </section>
-            <section id="transaksi-ringkasan">
-			<hr/>
-                <h3>Membuat Transaksi</h3>
-                <hr/>
-                <h4>Ringkasan</h4>
-                <p>Method save transaksi ini digunakan untuk menambahkan Transaksi Booking</p>
-            </section>
-            <section id="transaksi-request">
-                <h4>Request</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#transaksi-request-url">URL</a></li>
-                    <li><a data-toggle="tab" href="#transaksi-request-parameter">Parameter</a></li>
-                    <li><a data-toggle="tab" href="#transaksi-request-example">Contoh request</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="transaksi-request-url">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>URL</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>POST</td>
-                                <td>http://devwpa.com/api/transaksi/save</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="transaksi-request-parameter">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>Parameter</td>
-                                <td>Wajib</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>POST</td>
-                                <td>id</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>id_user</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id User</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>id_tempat</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Tempat</td>
-                            </tr>
-							<tr>
-                                <td>POST</td>
-                                <td>id_carabayar</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Cara Bayar</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>id_jadwal</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Jadwal</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>tgl_jadwal</td>
-                                <td>Ya</td>
-                                <td>datetime</td>
-                                <td>Tanggal jadwal</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>jumlah_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Jumlah transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>diskon_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Diskon transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>potongan_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Potongan transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>nominalreal</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Harga asli</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="transaksi-request-example">
-					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-StringRequest strReq = new StringRequest(
-	Request.Method.POST, 
-	http://devwpa.com/api/transaksi/save, 
-	new Response.Listener<String>(){
-		
-	}
-</code>
-					
-					</pre>
-					
-					</div>
-                </div>
-            </section>
-            <section id="transaksi-response">
-                <h4>Response</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#transaksi-success-response">Response sukses</a></li>
-                    <li><a data-toggle="tab" href="#transaksi-error-response">Response gagal</a></li>
-                    <li><a data-toggle="tab" href="#transaksi-penjelasan-response">Penjelasan response</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="transaksi-success-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-{
-    "status": true,
-    "message": "Berhasil di tambahkan",
-    "data": {
-        "id_user": "11",
-        "id_tempat": "3",
-        "id_carabayar": "5",
-        "id_jadwal": "1",
-        "tgl_jadwal": "2020-01-04 01:00:00.000000",
-        "waktu_transaksi": "04-01-2020 05:34:31",
-        "waktu_pembayaran": "04-01-2020 05:34:31",
-        "jumlah_transaksi": "2",
-        "diskon_transaksi": "10",
-        "potongan_transaksi": "20",
-        "nominalreal": "90",
-        "status_transaksi": 0
-    }
-}
-</code>					
-					</pre>
-					
-                    </div>
-                    <div class="tab-pane fade" id="transaksi-error-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-
-</code>					
-					</pre>
-                    </div>
-                    <div class="tab-pane fade" id="transaksi-penjelasan-response">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Komponen</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>status</td>
-                                <td>Bool</td>
-                                <td>Status True atau False</td>
-                            </tr>
-							<tr>
-                                <td>message</td>
-                                <td>String</td>
-                                <td>Pesan Berhasil atau Tidak</td>
-                            </tr>
-                            <tr>
-                                <td>data</td>
-                                <td>String</td>
-                                <td>Data response</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-            <section id="updatetransaksi-ringkasan">
-			<hr/>
-                <h3>Update Transaksi</h3>
-                <hr/>
-                <h4>Ringkasan</h4>
-                <p>Method update transaksi ini digunakan untuk mengubah Transaksi Booking</p>
-            </section>
-            <section id="updatetransaksi-request">
-                <h4>Request</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#updatetransaksi-request-url">URL</a></li>
-                    <li><a data-toggle="tab" href="#updatetransaksi-request-parameter">Parameter</a></li>
-                    <li><a data-toggle="tab" href="#updatetransaksi-request-example">Contoh request</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="updatetransaksi-request-url">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>URL</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>POST</td>
-                                <td>http://devwpa.com/api/transaksi/update</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="updatetransaksi-request-parameter">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>Parameter</td>
-                                <td>Wajib</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>POST</td>
-                                <td>id</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>id_tempat</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Tempat</td>
-                            </tr>
-							<tr>
-                                <td>POST</td>
-                                <td>id_carabayar</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Cara Bayar</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>id_jadwal</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Jadwal</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>tgl_jadwal</td>
-                                <td>Ya</td>
-                                <td>datetime</td>
-                                <td>Tanggal jadwal</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>jumlah_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Jumlah transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>diskon_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Diskon transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>potongan_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Potongan transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>nominalreal</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Harga asli</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="updatetransaksi-request-example">
-					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-StringRequest strReq = new StringRequest(
-	Request.Method.POST, 
-	http://devwpa.com/api/transaksi/update, 
-	new Response.Listener<String>(){
-		
-	}
-</code>
-					
-					</pre>
-					
-					</div>
-                </div>
-            </section>
-            <section id="updatetransaksi-response">
-                <h4>Response</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#updatetransaksi-success-response">Response sukses</a></li>
-                    <li><a data-toggle="tab" href="#updatetransaksi-error-response">Response gagal</a></li>
-                    <li><a data-toggle="tab" href="#updatetransaksi-penjelasan-response">Penjelasan response</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="updatetransaksi-success-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-{
-    "status": true,
-    "message": "Berhasil di update",
-    "data": {
-        "id_tempat": "3",
-        "id_carabayar": "6",
-        "id_jadwal": "1",
-        "tgl_jadwal": "2020-01-04 01:00:00.000000",
-        "waktu_transaksi": "04-01-2020 05:38:40",
-        "jumlah_transaksi": "2",
-        "diskon_transaksi": "10",
-        "potongan_transaksi": "20",
-        "nominalreal": "90"
-    }
-}
-</code>					
-					</pre>
-					
-                    </div>
-                    <div class="tab-pane fade" id="updatetransaksi-error-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-
-</code>					
-					</pre>
-                    </div>
-                    <div class="tab-pane fade" id="updatetransaksi-penjelasan-response">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Komponen</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>status</td>
-                                <td>Bool</td>
-                                <td>Status True atau False</td>
-                            </tr>
-							<tr>
-                                <td>message</td>
-                                <td>String</td>
-                                <td>Pesan Berhasil atau Tidak</td>
-                            </tr>
-                            <tr>
-                                <td>data</td>
-                                <td>String</td>
-                                <td>Data response</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-            <section id="gettransaksi-ringkasan">
-			<hr/>
-                <h3>Get Transaksi</h3>
-                <hr/>
-                <h4>Ringkasan</h4>
-                <p>Method get transaksi ini digunakan untuk menampilkan Transaksi Booking</p>
-            </section>
-            <section id="gettransaksi-request">
-                <h4>Request</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#gettransaksi-request-url">URL</a></li>
-                    <li><a data-toggle="tab" href="#gettransaksi-request-parameter">Parameter</a></li>
-                    <li><a data-toggle="tab" href="#gettransaksi-request-example">Contoh request</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="gettransaksi-request-url">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>URL</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>GET</td>
-                                <td>http://devwpa.com/api/transaksi/getdata?id=1</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="gettransaksi-request-parameter">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>Parameter</td>
-                                <td>Wajib</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>GET</td>
-                                <td>id</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>GET</td>
-                                <td>id_user</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id User</td>
-                            </tr>
-                            <tr>
-                                <td>GET</td>
-                                <td>id_tempat</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Tempat</td>
-                            </tr>
-							<tr>
-                                <td>GET</td>
-                                <td>id_carabayar</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Cara Bayar</td>
-                            </tr>
-                            <tr>
-                                <td>GET</td>
-                                <td>id_jadwal</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Jadwal</td>
-                            </tr>
-                            <tr>
-                                <td>GET</td>
-                                <td>tgl_jadwal</td>
-                                <td>Ya</td>
-                                <td>datetime</td>
-                                <td>Tanggal jadwal</td>
-                            </tr>
-                            <tr>
-                                <td>GET</td>
-                                <td>jumlah_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Jumlah transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>GET</td>
-                                <td>diskon_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Diskon transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>GET</td>
-                                <td>potongan_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Potongan transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>GET</td>
-                                <td>nominalreal</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Harga asli</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <p><strong>Catatan:</strong></p>
-                        <ul>
-                            <li>Digunakan untuk mendapatkan data berdasarkan id. Jika ingin mendapatkan semua data hilangkan ?id=1
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane fade" id="gettransaksi-request-example">
-					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-StringRequest strReq = new StringRequest(
-	Request.Method.GET, 
-	http://devwpa.com/api/transaksi/getdata?id=1, 
-	new Response.Listener<String>(){
-		
-	}
-</code>
-					
-					</pre>
-					
-					</div>
-                </div>
-            </section>
-            <section id="gettransaksi-response">
-                <h4>Response</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#gettransaksi-success-response">Response sukses</a></li>
-                    <li><a data-toggle="tab" href="#gettransaksi-error-response">Response gagal</a></li>
-                    <li><a data-toggle="tab" href="#gettransaksi-penjelasan-response">Penjelasan response</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="gettransaksi-success-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-{
-    "status": true,
-    "message": "Data Ada",
-    "data": [
-        {
-            "id": "1",
-            "id_user": "11",
-            "id_tempat": "3",
-            "id_carabayar": "6",
-            "id_jadwal": "1",
-            "tgl_jadwal": "2020-01-04 01:00:00.000000",
-            "waktu_transaksi": "0000-00-00 00:00:00.000000",
-            "waktu_pembayaran": "0000-00-00 00:00:00.000000",
-            "jumlah_transaksi": "2",
-            "diskon_transaksi": "10",
-            "potongan_transaksi": "20",
-            "nominalreal": "90",
-            "status_transaksi": "0"
-        }
-    ]
-}
-</code>					
-					</pre>
-					
-                    </div>
-                    <div class="tab-pane fade" id="gettransaksi-error-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-
-</code>					
-					</pre>
-                    </div>
-                    <div class="tab-pane fade" id="gettransaksi-penjelasan-response">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Komponen</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>status</td>
-                                <td>Bool</td>
-                                <td>Status True atau False</td>
-                            </tr>
-							<tr>
-                                <td>message</td>
-                                <td>String</td>
-                                <td>Pesan Berhasil atau Tidak</td>
-                            </tr>
-                            <tr>
-                                <td>data</td>
-                                <td>String</td>
-                                <td>Data response</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-            <section id="waktutransaksi-ringkasan">
-			<hr/>
-                <h3>Update Waktu Pembayaran</h3>
-                <hr/>
-                <h4>Ringkasan</h4>
-                <p>Method update waktu pembayaran ini digunakan untuk mengubah waktu transaksi pembayaran</p>
-            </section>
-            <section id="waktutransaksi-request">
-                <h4>Request</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#waktutransaksi-request-url">URL</a></li>
-                    <li><a data-toggle="tab" href="#waktutransaksi-request-parameter">Parameter</a></li>
-                    <li><a data-toggle="tab" href="#waktutransaksi-request-example">Contoh request</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="waktutransaksi-request-url">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>URL</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>POST</td>
-                                <td>http://devwpa.com/api/transaksi/updatewaktupembayaran</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="waktutransaksi-request-parameter">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>Parameter</td>
-                                <td>Wajib</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>POST</td>
-                                <td>id</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>waktu_pembayaran</td>
-                                <td>Ya</td>
-                                <td>datetime</td>
-                                <td>Waktu pembayaran</td>
-                            </tr>
-							</tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="waktutransaksi-request-example">
-					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-StringRequest strReq = new StringRequest(
-	Request.Method.POST, 
-	http://devwpa.com/api/transaksi/updatewaktupembayaran, 
-	new Response.Listener<String>(){
-		
-	}
-</code>
-					
-					</pre>
-					
-					</div>
-                </div>
-            </section>
-            <section id="waktutransaksi-response">
-                <h4>Response</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#waktutransaksi-success-response">Response sukses</a></li>
-                    <li><a data-toggle="tab" href="#waktutransaksi-error-response">Response gagal</a></li>
-                    <li><a data-toggle="tab" href="#waktutransaksi-penjelasan-response">Penjelasan response</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="waktutransaksi-success-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-{
-    "status": true,
-    "message": "Pembayaran Berhasil di update",
-    "data": {
-        "waktu_pembayaran": "2020-01-04 05:44:37"
-    }
-}
-</code>					
-					</pre>
-					
-                    </div>
-                    <div class="tab-pane fade" id="waktutransaksi-error-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-
-</code>					
-					</pre>
-                    </div>
-                    <div class="tab-pane fade" id="waktutransaksi-penjelasan-response">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Komponen</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>status</td>
-                                <td>Bool</td>
-                                <td>Status True atau False</td>
-                            </tr>
-							<tr>
-                                <td>message</td>
-                                <td>String</td>
-                                <td>Pesan Berhasil atau Tidak</td>
-                            </tr>
-                            <tr>
-                                <td>data</td>
-                                <td>String</td>
-                                <td>Data response</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-            <section id="statustransaksi-ringkasan">
-			<hr/>
-                <h3>Update Status Pembayaran</h3>
-                <hr/>
-                <h4>Ringkasan</h4>
-                <p>Method update status pembayaran ini digunakan untuk mengubah status transaksi pembayaran</p>
-            </section>
-            <section id="statustransaksi-request">
-                <h4>Request</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#statusransaksi-request-url">URL</a></li>
-                    <li><a data-toggle="tab" href="#statustransaksi-request-parameter">Parameter</a></li>
-                    <li><a data-toggle="tab" href="#statustransaksi-request-example">Contoh request</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="statustransaksi-request-url">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>URL</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>POST</td>
-                                <td>http://devwpa.com/api/transaksi/updatestatustransaksi</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="statustransaksi-request-parameter">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Method</td>
-                                <td>Parameter</td>
-                                <td>Wajib</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>POST</td>
-                                <td>id</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Id Transaksi</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>status_transaksi</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Status transaksi</td>
-                            </tr>
-							</tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="statustransaksi-request-example">
-					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-StringRequest strReq = new StringRequest(
-	Request.Method.POST, 
-	http://devwpa.com/api/transaksi/updatestatustransaksi, 
-	new Response.Listener<String>(){
-		
-	}
-</code>
-					
-					</pre>
-					
-					</div>
-                </div>
-            </section>
-            <section id="statustransaksi-response">
-                <h4>Response</h4>
-                <ul class="nav nav-tabs ro-doc-tabs">
-                    <li class="active"><a data-toggle="tab" href="#statustransaksi-success-response">Response sukses</a></li>
-                    <li><a data-toggle="tab" href="#statustransaksi-error-response">Response gagal</a></li>
-                    <li><a data-toggle="tab" href="#statustransaksi-penjelasan-response">Penjelasan response</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="statustransaksi-success-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-{
-    "status": true,
-    "message": "Transaksi Terferivikasi",
-    "data": {
-        "status_transaksi": 1
-    }
-}
-</code>					
-					</pre>
-					
-                    </div>
-                    <div class="tab-pane fade" id="statustransaksi-error-response">
-					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
-					
-<code>
-
-</code>					
-					</pre>
-                    </div>
-                    <div class="tab-pane fade" id="statustransaksi-penjelasan-response">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <td>Komponen</td>
-                                <td>Tipe</td>
-                                <td>Keterangan</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>status</td>
-                                <td>Bool</td>
-                                <td>Status True atau False</td>
-                            </tr>
-							<tr>
-                                <td>message</td>
-                                <td>String</td>
-                                <td>Pesan Berhasil atau Tidak</td>
-                            </tr>
-                            <tr>
-                                <td>data</td>
-                                <td>String</td>
-                                <td>Data response</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
+            
 
             <!-- Table Jenis Bank-->
 
@@ -7379,7 +6491,7 @@ StringRequest strReq = new StringRequest(
                 <h3><strong>Menambahkan Kode Unik Trasfer</strong></h3>
                 <hr/>
                 <h4>Ringkasan</h4>
-                <p>Method "save" Digunakan untuk menambahkan Kode Unik Transfer </p>
+                <p>Method "save" Digunakan untuk menambahkan Kode Unik Transfer . Kode unik ini akan otomatis tergenerate oleh sistem dan di tambahkan dengan nominal real menjadi total transfer.</p>
             </section>
             <section id="kodeuniktf-request">
                 <h4>Request</h4>
@@ -7424,13 +6536,7 @@ StringRequest strReq = new StringRequest(
                                 <td>int</td>
                                 <td>Id Transaksi</td>
                             </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>kode_unik</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Kode unik tranfer</td>
-                            </tr>
+                            
                             <tr>
                                 <td>POST</td>
                                 <td>total_transfer</td>
@@ -7438,13 +6544,7 @@ StringRequest strReq = new StringRequest(
                                 <td>Int</td>
                                 <td>Jumlah transfer</td>
                             </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>createdtime</td>
-                                <td>Ya</td>
-                                <td>DateTime</td>
-                                <td>Waktu mulai aktif kode unik transfer</td>
-                            </tr>
+                            
                             <tr>
                                 <td>POST</td>
                                 <td>expiredtime</td>
@@ -7452,13 +6552,7 @@ StringRequest strReq = new StringRequest(
                                 <td>DateTime</td>
                                 <td>Batas waktu kadaluarsa kode unik transfer</td>
                             </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>status</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Status kode unik transfer</td>
-                            </tr>
+
                             </tbody>
                         </table>
                         
@@ -7597,40 +6691,13 @@ StringRequest strReq = new StringRequest(
                                 <td>int</td>
                                 <td>Id Transaksi</td>
                             </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>kode_unik</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Kode unik transfer</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>total_transfer</td>
-                                <td>Ya</td>
-                                <td>Int</td>
-                                <td>Jumlah transfer</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>createdtime</td>
-                                <td>Ya</td>
-                                <td>DateTime</td>
-                                <td>Waktu mulai aktif kode unik transfer</td>
-                            </tr>
+                            
                             <tr>
                                 <td>POST</td>
                                 <td>expiredtime</td>
                                 <td>Ya</td>
                                 <td>DateTime</td>
                                 <td>Batas waktu kadaluarsa kode unik transfer</td>
-                            </tr>
-                            <tr>
-                                <td>POST</td>
-                                <td>status</td>
-                                <td>Ya</td>
-                                <td>int</td>
-                                <td>Status kode unik transfer</td>
                             </tr>
                             </tbody>
                         </table>
@@ -8527,6 +7594,1367 @@ StringRequest strReq = new StringRequest(
 					</pre>
                     </div>
                     <div class="tab-pane fade" id="getdata-kunjungan-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="transaksi-ringkasan">
+			<hr/>
+                <h3>Membuat Transaksi</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method save transaksi ini digunakan untuk menambahkan Transaksi Booking</p>
+            </section>
+            <section id="transaksi-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#transaksi-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#transaksi-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#transaksi-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="transaksi-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/transaksi/save</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="transaksi-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_user</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id User</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_tempat</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Tempat</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>id_carabayar</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Cara Bayar</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_jadwal</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Jadwal</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>tgl_jadwal</td>
+                                <td>Ya</td>
+                                <td>datetime</td>
+                                <td>Tanggal jadwal</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>jumlah_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Jumlah transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>diskon_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Diskon transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>potongan_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Potongan transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>nominalreal</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Harga asli</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="transaksi-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/transaksi/save, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="transaksi-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#transaksi-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#transaksi-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#transaksi-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="transaksi-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di tambahkan",
+    "data": {
+        "id_user": "11",
+        "id_tempat": "3",
+        "id_carabayar": "5",
+        "id_jadwal": "1",
+        "tgl_jadwal": "2020-01-04 01:00:00.000000",
+        "waktu_transaksi": "04-01-2020 05:34:31",
+        "waktu_pembayaran": "04-01-2020 05:34:31",
+        "jumlah_transaksi": "2",
+        "diskon_transaksi": "10",
+        "potongan_transaksi": "20",
+        "nominalreal": "90",
+        "status_transaksi": 0
+    }
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="transaksi-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="transaksi-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+							<tr>
+                                <td>message</td>
+                                <td>String</td>
+                                <td>Pesan Berhasil atau Tidak</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="updatetransaksi-ringkasan">
+			<hr/>
+                <h3>Update Transaksi</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method update transaksi ini digunakan untuk mengubah Transaksi Booking</p>
+            </section>
+            <section id="updatetransaksi-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#updatetransaksi-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#updatetransaksi-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#updatetransaksi-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="updatetransaksi-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/transaksi/update</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="updatetransaksi-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_tempat</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Tempat</td>
+                            </tr>
+							<tr>
+                                <td>POST</td>
+                                <td>id_carabayar</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Cara Bayar</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_jadwal</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Jadwal</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>tgl_jadwal</td>
+                                <td>Ya</td>
+                                <td>datetime</td>
+                                <td>Tanggal jadwal</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>jumlah_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Jumlah transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>diskon_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Diskon transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>potongan_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Potongan transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>nominalreal</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Harga asli</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="updatetransaksi-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/transaksi/update, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="updatetransaksi-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#updatetransaksi-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#updatetransaksi-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#updatetransaksi-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="updatetransaksi-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Berhasil di update",
+    "data": {
+        "id_tempat": "3",
+        "id_carabayar": "6",
+        "id_jadwal": "1",
+        "tgl_jadwal": "2020-01-04 01:00:00.000000",
+        "waktu_transaksi": "04-01-2020 05:38:40",
+        "jumlah_transaksi": "2",
+        "diskon_transaksi": "10",
+        "potongan_transaksi": "20",
+        "nominalreal": "90"
+    }
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="updatetransaksi-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="updatetransaksi-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+							<tr>
+                                <td>message</td>
+                                <td>String</td>
+                                <td>Pesan Berhasil atau Tidak</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="gettransaksi-ringkasan">
+			<hr/>
+                <h3>Get Transaksi</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method get transaksi ini digunakan untuk menampilkan Transaksi Booking</p>
+            </section>
+            <section id="gettransaksi-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#gettransaksi-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#gettransaksi-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#gettransaksi-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="gettransaksi-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/transaksi/getdata?id=1</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="gettransaksi-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>id_user</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id User</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>id_tempat</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Tempat</td>
+                            </tr>
+							<tr>
+                                <td>GET</td>
+                                <td>id_carabayar</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Cara Bayar</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>id_jadwal</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Jadwal</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>tgl_jadwal</td>
+                                <td>Ya</td>
+                                <td>datetime</td>
+                                <td>Tanggal jadwal</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>jumlah_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Jumlah transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>diskon_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Diskon transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>potongan_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Potongan transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>nominalreal</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Harga asli</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Catatan:</strong></p>
+                        <ul>
+                            <li>Digunakan untuk mendapatkan data berdasarkan id. Jika ingin mendapatkan semua data hilangkan ?id=1
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="gettransaksi-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/transaksi/getdata?id=1, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="gettransaksi-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#gettransaksi-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#gettransaksi-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#gettransaksi-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="gettransaksi-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Data Ada",
+    "data": [
+        {
+            "id": "1",
+            "id_user": "11",
+            "id_tempat": "3",
+            "id_carabayar": "6",
+            "id_jadwal": "1",
+            "tgl_jadwal": "2020-01-04 01:00:00.000000",
+            "waktu_transaksi": "0000-00-00 00:00:00.000000",
+            "waktu_pembayaran": "0000-00-00 00:00:00.000000",
+            "jumlah_transaksi": "2",
+            "diskon_transaksi": "10",
+            "potongan_transaksi": "20",
+            "nominalreal": "90",
+            "status_transaksi": "0"
+        }
+    ]
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="gettransaksi-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="gettransaksi-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+							<tr>
+                                <td>message</td>
+                                <td>String</td>
+                                <td>Pesan Berhasil atau Tidak</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="waktutransaksi-ringkasan">
+			<hr/>
+                <h3>Update Waktu Pembayaran</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method update waktu pembayaran ini digunakan untuk mengubah waktu transaksi pembayaran</p>
+            </section>
+            <section id="waktutransaksi-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#waktutransaksi-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#waktutransaksi-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#waktutransaksi-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="waktutransaksi-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/transaksi/updatewaktupembayaran</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="waktutransaksi-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>waktu_pembayaran</td>
+                                <td>Ya</td>
+                                <td>datetime</td>
+                                <td>Waktu pembayaran</td>
+                            </tr>
+							</tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="waktutransaksi-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/transaksi/updatewaktupembayaran, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="waktutransaksi-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#waktutransaksi-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#waktutransaksi-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#waktutransaksi-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="waktutransaksi-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Pembayaran Berhasil di update",
+    "data": {
+        "waktu_pembayaran": "2020-01-04 05:44:37"
+    }
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="waktutransaksi-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="waktutransaksi-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+							<tr>
+                                <td>message</td>
+                                <td>String</td>
+                                <td>Pesan Berhasil atau Tidak</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="statustransaksi-ringkasan">
+			<hr/>
+                <h3>Update Status Pembayaran</h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method update status pembayaran ini digunakan untuk mengubah status transaksi pembayaran. </p>
+            </section>
+            <section id="statustransaksi-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#statusransaksi-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#statustransaksi-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#statustransaksi-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="statustransaksi-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/transaksi/updatestatustransaksi</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="statustransaksi-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>status_transaksi</td>
+                                <td>Ya</td>
+                                <td>int</td>
+                                <td>Status transaksi</td>
+                            </tr>
+							</tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="statustransaksi-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/transaksi/updatestatustransaksi, 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					
+					</div>
+                </div>
+            </section>
+            <section id="statustransaksi-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#statustransaksi-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#statustransaksi-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#statustransaksi-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="statustransaksi-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Transaksi Terferivikasi",
+    "data": {
+        "status_transaksi": 1
+    }
+}
+</code>					
+					</pre>
+					
+                    </div>
+                    <div class="tab-pane fade" id="statustransaksi-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+
+</code>					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="statustransaksi-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+							<tr>
+                                <td>message</td>
+                                <td>String</td>
+                                <td>Pesan Berhasil atau Tidak</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="getkodeuniktf-ringkasan">
+			<hr/>
+                <h3><strong>Get Data Transaksi</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "getbyidtransaksi?idtransaksi=1" pada tabel kodeunik_tf digunakan untuk mengambil data transaksi berdasarkan id_transaksi</p>
+            </section>
+            <section id="getkodeuniktf-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#getkodeuniktf-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#getkodeuniktf-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#getkodeuniktf-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="getkodeuniktf-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/kodeuniktf/getbyidtransaksi?idtransaksi=1</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="getkodeuniktf-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID Kode Unik TF</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>id_transaksi</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>total_transfer</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Total Transfer</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>createdtime</td>
+                                <td>Ya</td>
+                                <td>Datime</td>
+                                <td>Expired Time</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>expiredtime</td>
+                                <td>Ya</td>
+                                <td>Datime</td>
+                                <td>Expired Time</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="getkodeuniktf-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/kodeuniktf/getbyidtransaksi?idtransaksi=1 , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="getkodeuniktf-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#getkodeuniktf-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#getkodeuniktf-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#getkodeuniktf-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="getkodeuniktf-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Data Ada",
+    "data": [
+        {
+            "id": "2",
+            "id_transaksi": "1",
+            "kode_unik": "640",
+            "total_transfer": "90640",
+            "createdtime": "2020-01-05 03:13:51.000000",
+            "expiredtime": "0000-00-00 00:00:00.000000",
+            "status": "0"
+        }
+    ]
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="getkodeuniktf-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="getkodeuniktf-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="gettransaksiid-ringkasan">
+			<hr/>
+                <h3><strong>Get Data Transaksi By User Id</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "getbyiduser?id_user=11" pada tabel transaksi digunakan untuk mengambil data transaksi berdasarkan id_user</p>
+            </section>
+            <section id="gettransaksiid-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#gettransaksiid-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#gettransaksiid-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#gettransaksiid-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="gettransaksiid-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>http://devwpa.com/api/transaksi/getbyiduser?id_user=11</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="gettransaksiid-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GET</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>id_user</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>Id User</td>
+                            </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="gettransaksiid-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.GET, 
+	http://devwpa.com/api/transaksi/getbyiduser?id_user=11 , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="gettransaksiid-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#gettransaksiid-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#gettransaksiid-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#gettransaksiid-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="gettransaksiid-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Data Ada",
+    "data": [
+        {
+            "id": "1",
+            "id_user": "11",
+            "id_tempat": "3",
+            "id_carabayar": "6",
+            "id_jadwal": "1",
+            "tgl_jadwal": "2020-01-04 01:00:00.000000",
+            "waktu_transaksi": "0000-00-00 00:00:00.000000",
+            "waktu_pembayaran": "2020-01-04 05:44:37.000000",
+            "jumlah_transaksi": "2",
+            "diskon_transaksi": "10",
+            "potongan_transaksi": "20",
+            "nominalreal": "90",
+            "status_transaksi": "1"
+        }
+    ]
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="gettransaksiid-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="gettransaksiid-penjelasan-response">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Komponen</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>Bool</td>
+                                <td>Status True atau False</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>String</td>
+                                <td>Data response</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cekpembayaran-ringkasan">
+			<hr/>
+                <h3><strong>Mengecek Pembayaran</strong></h3>
+                <hr/>
+                <h4>Ringkasan</h4>
+                <p>Method "cekpembayaran" pada fungsi transaksi digunakan untuk mengecek pembayaran otomatis. Ketika cek pembayaran akan mengirimkan parameter kode unik yang di ambil dari 3 digit terakhir total transfer , kemudian ngambil data dari tabel kodeunik, Siapa yang memiliki kode unik tersebut , maka akan mendapatkan id_transaksi dan total transfer. Selanjutnya di cek ke tabel cek_pembayaran  (sebagai respon dari bank) , ketika sudah ada datanya maka akan mengupdate di tabel transaksi, bahwa id transaksi tersebut telah melakukan pembayaran
+
+</p>
+            </section>
+            <section id="cekpembayaran-request">
+                <h4>Request</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#cekpembayaran-request-url">URL</a></li>
+                    <li><a data-toggle="tab" href="#cekpembayaran-request-parameter">Parameter</a></li>
+                    <li><a data-toggle="tab" href="#cekpembayaran-request-example">Contoh request</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active in fade" id="cekpembayaran-request-url">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>URL</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>http://devwpa.com/api/transaksi/cekpembayaran</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="cekpembayaran-request-parameter">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Parameter</td>
+                                <td>Wajib</td>
+                                <td>Tipe</td>
+                                <td>Keterangan</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>id</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID Cek Pembayaran</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>id_transaksi</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>ID Transaksi</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>nominal</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>jumlah yang dibayar</td>
+                            </tr>
+                            <tr>
+                                <td>POST</td>
+                                <td>kode_unik</td>
+                                <td>Ya</td>
+                                <td>Int</td>
+                                <td>3 digit terakhir total bayar</td>
+                            </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="cekpembayaran-request-example">
+					<pre class="ft-syntax-highlight" data-syntax="java" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+StringRequest strReq = new StringRequest(
+	Request.Method.POST, 
+	http://devwpa.com/api/transaksi/cekpembayaran , 
+	new Response.Listener<String>(){
+		
+	}
+</code>
+					
+					</pre>
+					</div>
+                </div>
+            </section>
+            <section id="cekpembayaran-response">
+                <h4>Response</h4>
+                <ul class="nav nav-tabs ro-doc-tabs">
+                    <li class="active"><a data-toggle="tab" href="#cekpembayaran-success-response">Response sukses</a></li>
+                    <li><a data-toggle="tab" href="#cekpembayaran-error-response">Response gagal</a></li>
+                    <li><a data-toggle="tab" href="#cekpembayaran-penjelasan-response">Penjelasan response</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="cekpembayaran-success-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    "status": true,
+    "message": "Pembayaran Berhasil",
+    "data": {
+        "id": "1",
+        "nominal": "90690",
+        "status": "1"
+    }
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="cekpembayaran-error-response">
+					<pre class="ft-syntax-highlight" data-syntax="JSON" data-syntax-theme="one-dark" data-showTooltips="true">
+					
+<code>
+{
+    
+}
+</code>
+					
+					</pre>
+                    </div>
+                    <div class="tab-pane fade" id="cekpembayaran-penjelasan-response">
                         <table class="table table-bordered table-striped">
                             <thead>
                             <tr>

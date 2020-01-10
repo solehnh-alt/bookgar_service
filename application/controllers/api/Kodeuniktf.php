@@ -145,7 +145,27 @@ class Kodeuniktf extends REST_Controller
                 'message' => "Tidak Ada Data"
             ], REST_Controller::HTTP_NOT_FOUND);
         }
-    }
-
+    }    
     
+    public function getbyidtransaksi_get()
+    {
+        $idtransaksi = null;
+        if (!empty($_GET['idtransaksi'])) {
+            $idtransaksi = $_GET['idtransaksi'];
+        }
+        $data = $this->kodeuniktf->getdata($idtransaksid);
+
+        if (!empty($data)) {
+            $this->response([
+                'status'     => TRUE,
+                'message'     => 'Data Ada',
+                'data'        => $data
+            ], REST_Controller::HTTP_OK);
+        } else {
+            $this->response([
+                'status' => FALSE,
+                'message' => "Tidak Ada Data"
+            ], REST_Controller::HTTP_NOT_FOUND);
+        }
+    }
 }

@@ -35,6 +35,13 @@ class Mtransaksi extends CI_Model
 		}
 	}
 
+	public function getbyiduser($id_user)
+    {
+		return $this->db
+		->where('id_user',$id)
+		->get($this->table)->result_array();
+	}
+
 }
 
 ?>

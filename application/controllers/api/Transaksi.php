@@ -168,6 +168,29 @@ class Transaksi extends REST_Controller {
         
     }
 
+    public function getbyiduser_get()
+    {
+        $id_user=null;
+		if(!empty($_GET['id_user'])){
+			$id=$_GET['id_user'];
+		}
+        $data = $this->transaksi->getbyiduser($id);
+
+        if(!empty($data)){
+            $this->response([
+                'status' 	=> TRUE,
+                'message' 	=> 'Data Ada',
+                'data'		=> $data
+            ], REST_Controller::HTTP_OK);
+        }else{
+            $this->response([
+                'status' => FALSE,
+                'message' => "Tidak Ada Data"
+            ], REST_Controller::HTTP_NOT_FOUND);
+        }
+        
+    }
+
     public function cekpembayaran_post()
     {
         // $totaltf = $this->post('totaltf');

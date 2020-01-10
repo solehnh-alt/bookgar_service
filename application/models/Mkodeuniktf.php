@@ -41,4 +41,11 @@ class Mkodeuniktf extends CI_Model
             ->where('id_transaksi',$id)
             ->get($this->table)->result_array();
     }
+
+    public function getbyidtransaksi($idtransaksi)
+    {
+        return $this->db
+            ->where('id_transaksi', $idtransaksi)
+            ->get($this->table)->result_array();
+    }
 }
